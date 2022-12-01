@@ -26,6 +26,9 @@ const fireTorpedo = () => {
   
 }
 
+const attack = () => {
+ setSquare([ships,...shot])
+}
 
 const placeEnemyShips = () => {
   setEnemyShips([ships,...enemyShips])
@@ -238,8 +241,8 @@ console.log(enemyShips)
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className="col-1 A1" onClick={() => enemyShips.includes("A1") ? " hit" : " miss"}>A1</div>
-      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={() => enemyShips.includes("A2") ? " hit" : " miss"}>A2</div>
+      <div className="col-1 A1" onClick={attack}>A1</div>
+      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ") + (square.includes("enemy" ? " hit" : "miss"))} onClick={attack}>A2</div>
       <div className={"col-1 A3" + (shot == "A3" ? " hit" : " miss")} onClick={() => setShot("A3", ...shot)}>A3</div>
       <div className="col-1 A4" onClick={fireTorpedo}>A4</div>
       <div className="col-1 A5" onClick={fireTorpedo}>A5</div>

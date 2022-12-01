@@ -18,10 +18,20 @@ const [sendShip4, setSendShip4] = useState([]);
 
 const [enemyShips, setEnemyShips] = useState([]);
 
+const [shot, setShot] = useState("");
+const [square, setSquare] = useState("");
 
 const fireTorpedo = () => {
   console.log('attack')
+  
 }
+
+
+const placeEnemyShips = () => {
+  setEnemyShips([ships,...enemyShips])
+}
+
+//Mis barcos*************************************************************************************//
 
 const placeMyShips = (e) => {
 setMyShips(e.target.value)
@@ -64,24 +74,18 @@ const sendMyShip4 = () => {
   setSendShip4([myShips4])
  }
 
- function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
- }
- 
 
   
   let letter = ['A','B','C','D','E','F','G','H','I'];
   let number = ['1','2','3','4','5','6','7','8','9'];
   let ships = [];
-  for (let i = 0; i < 5; i++){
+
   ships += letter[Math.floor(Math.random() * letter.length)] + number[Math.floor(Math.random() * number.length)];
-}
 
 
 
 
-
-  console.log(ships)
+console.log(enemyShips)
   return (<div>
     <div>ingresa coordenadas</div>
     <input onChange={placeMyShips}></input>
@@ -95,8 +99,7 @@ const sendMyShip4 = () => {
     <input onChange={placeMyShips4}></input>
     <button onClick={sendMyShip4}>submit</button>
 
-
-    
+    <button onClick={placeEnemyShips}>Enemigos</button>
 
     <div className="container d-flex">
     <div className="row row-cols-3">
@@ -113,39 +116,39 @@ const sendMyShip4 = () => {
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className={"col-1 A1" + (sendShips == "A1" ? " ship" : sendShip1 == "A1" ? " ship" : sendShip2 == "A1" ? " ship" : sendShip3 == "A1" ? " ship" : sendShip4 == "A1" ? " ship" :   "")} onClick={fireTorpedo}>A1</div>
-      <div className={"col-1 A2" + (sendShips == "A2" ? " ship" : sendShip1 == "A2" ? " ship" : sendShip2 == "A2" ? " ship" : sendShip3 == "A2" ? " ship" : sendShip4 == "A2" ? " ship" :   "")} onClick={fireTorpedo}>A2</div>
-      <div className={"col-1 A3" + (sendShips == "A3" ? " ship" : sendShip1 == "A3" ? " ship" : sendShip2 == "A3" ? " ship" : sendShip3 == "A3" ? " ship" : sendShip4 == "A3" ? " ship" :   "")} onClick={fireTorpedo}>A3</div>
-      <div className={"col-1 A4" + (sendShips == "A4" ? " ship" : sendShip1 == "A4" ? " ship" : sendShip2 == "A4" ? " ship" : sendShip3 == "A4" ? " ship" : sendShip4 == "A4" ? " ship" :   "")} onClick={fireTorpedo}>A4</div>
-      <div className={"col-1 A5" + (sendShips == "A5" ? " ship" : sendShip1 == "A5" ? " ship" : sendShip2 == "A5" ? " ship" : sendShip3 == "A5" ? " ship" : sendShip4 == "A5" ? " ship" :   "")} onClick={fireTorpedo}>A5</div>
-      <div className={"col-1 A6" + (sendShips == "A6" ? " ship" : sendShip1 == "A6" ? " ship" : sendShip2 == "A6" ? " ship" : sendShip3 == "A6" ? " ship" : sendShip4 == "A6" ? " ship" :   "")} onClick={fireTorpedo}>A6</div>
-      <div className={"col-1 A7" + (sendShips == "A7" ? " ship" : sendShip1 == "A7" ? " ship" : sendShip2 == "A7" ? " ship" : sendShip3 == "A7" ? " ship" : sendShip4 == "A7" ? " ship" :   "")} onClick={fireTorpedo}>A7</div>
-      <div className={"col-1 A8" + (sendShips == "A8" ? " ship" : sendShip1 == "A8" ? " ship" : sendShip2 == "A8" ? " ship" : sendShip3 == "A8" ? " ship" : sendShip4 == "A8" ? " ship" :   "")} onClick={fireTorpedo}>A8</div>
-      <div className={"col-1 A9" + (sendShips == "A9" ? " ship" : sendShip1 == "A9" ? " ship" : sendShip2 == "A9" ? " ship" : sendShip3 == "A9" ? " ship" : sendShip4 == "A9" ? " ship" :   "")} onClick={fireTorpedo}>A9</div>
+      <div className={"col-1 A1" + (sendShips == "A1" ? " ship" : sendShip1 == "A1" ? " ship" : sendShip2 == "A1" ? " ship" : sendShip3 == "A1" ? " ship" : sendShip4 == "A1" ? " ship" :   "")}>A1</div>
+      <div className={"col-1 A2" + (sendShips == "A2" ? " ship" : sendShip1 == "A2" ? " ship" : sendShip2 == "A2" ? " ship" : sendShip3 == "A2" ? " ship" : sendShip4 == "A2" ? " ship" :   "")}>A2</div>
+      <div className={"col-1 A3" + (sendShips == "A3" ? " ship" : sendShip1 == "A3" ? " ship" : sendShip2 == "A3" ? " ship" : sendShip3 == "A3" ? " ship" : sendShip4 == "A3" ? " ship" :   "")}>A3</div>
+      <div className={"col-1 A4" + (sendShips == "A4" ? " ship" : sendShip1 == "A4" ? " ship" : sendShip2 == "A4" ? " ship" : sendShip3 == "A4" ? " ship" : sendShip4 == "A4" ? " ship" :   "")}>A4</div>
+      <div className={"col-1 A5" + (sendShips == "A5" ? " ship" : sendShip1 == "A5" ? " ship" : sendShip2 == "A5" ? " ship" : sendShip3 == "A5" ? " ship" : sendShip4 == "A5" ? " ship" :   "")}>A5</div>
+      <div className={"col-1 A6" + (sendShips == "A6" ? " ship" : sendShip1 == "A6" ? " ship" : sendShip2 == "A6" ? " ship" : sendShip3 == "A6" ? " ship" : sendShip4 == "A6" ? " ship" :   "")}>A6</div>
+      <div className={"col-1 A7" + (sendShips == "A7" ? " ship" : sendShip1 == "A7" ? " ship" : sendShip2 == "A7" ? " ship" : sendShip3 == "A7" ? " ship" : sendShip4 == "A7" ? " ship" :   "")}>A7</div>
+      <div className={"col-1 A8" + (sendShips == "A8" ? " ship" : sendShip1 == "A8" ? " ship" : sendShip2 == "A8" ? " ship" : sendShip3 == "A8" ? " ship" : sendShip4 == "A8" ? " ship" :   "")}>A8</div>
+      <div className={"col-1 A9" + (sendShips == "A9" ? " ship" : sendShip1 == "A9" ? " ship" : sendShip2 == "A9" ? " ship" : sendShip3 == "A9" ? " ship" : sendShip4 == "A9" ? " ship" :   "")}>A9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">B</div>
-      <div className={"col-1 B1" + (sendShips == "B1" ? " ship" : sendShip1 == "B1" ? " ship" : sendShip2 == "B1" ? " ship" : sendShip3 == "B1" ? " ship" : sendShip4 == "B1" ? " ship" :   "")} onClick={fireTorpedo}>B1</div>
-      <div className={"col-1 B2" + (sendShips == "B2" ? " ship" : sendShip1 == "B2" ? " ship" : sendShip2 == "B2" ? " ship" : sendShip3 == "B2" ? " ship" : sendShip4 == "B2" ? " ship" :   "")} onClick={fireTorpedo}>B2</div>
-      <div className={"col-1 B3" + (sendShips == "B3" ? " ship" : sendShip1 == "B3" ? " ship" : sendShip2 == "B3" ? " ship" : sendShip3 == "B3" ? " ship" : sendShip4 == "B3" ? " ship" :   "")} onClick={fireTorpedo}>B3</div>
-      <div className={"col-1 B4" + (sendShips == "B4" ? " ship" : sendShip1 == "B4" ? " ship" : sendShip2 == "B4" ? " ship" : sendShip3 == "B4" ? " ship" : sendShip4 == "B4" ? " ship" :   "")} onClick={fireTorpedo}>B4</div>
-      <div className={"col-1 B5" + (sendShips == "B5" ? " ship" : sendShip1 == "B5" ? " ship" : sendShip2 == "B5" ? " ship" : sendShip3 == "B5" ? " ship" : sendShip4 == "B5" ? " ship" :   "")} onClick={fireTorpedo}>B5</div>
-      <div className={"col-1 B6" + (sendShips == "B6" ? " ship" : sendShip1 == "B6" ? " ship" : sendShip2 == "B6" ? " ship" : sendShip3 == "B6" ? " ship" : sendShip4 == "B6" ? " ship" :   "")} onClick={fireTorpedo}>B6</div>
-      <div className={"col-1 B7" + (sendShips == "B7" ? " ship" : sendShip1 == "B7" ? " ship" : sendShip2 == "B7" ? " ship" : sendShip3 == "B7" ? " ship" : sendShip4 == "B7" ? " ship" :   "")} onClick={fireTorpedo}>B7</div>
-      <div className={"col-1 B8" + (sendShips == "B8" ? " ship" : sendShip1 == "B8" ? " ship" : sendShip2 == "B8" ? " ship" : sendShip3 == "B8" ? " ship" : sendShip4 == "B8" ? " ship" :   "")} onClick={fireTorpedo}>B8</div>
-      <div className={"col-1 B9" + (sendShips == "B9" ? " ship" : sendShip1 == "B9" ? " ship" : sendShip2 == "B9" ? " ship" : sendShip3 == "B9" ? " ship" : sendShip4 == "B9" ? " ship" :   "")} onClick={fireTorpedo}>B9</div>
+      <div className={"col-1 B1" + (sendShips == "B1" ? " ship" : sendShip1 == "B1" ? " ship" : sendShip2 == "B1" ? " ship" : sendShip3 == "B1" ? " ship" : sendShip4 == "B1" ? " ship" :   "")}>B1</div>
+      <div className={"col-1 B2" + (sendShips == "B2" ? " ship" : sendShip1 == "B2" ? " ship" : sendShip2 == "B2" ? " ship" : sendShip3 == "B2" ? " ship" : sendShip4 == "B2" ? " ship" :   "")}>B2</div>
+      <div className={"col-1 B3" + (sendShips == "B3" ? " ship" : sendShip1 == "B3" ? " ship" : sendShip2 == "B3" ? " ship" : sendShip3 == "B3" ? " ship" : sendShip4 == "B3" ? " ship" :   "")}>B3</div>
+      <div className={"col-1 B4" + (sendShips == "B4" ? " ship" : sendShip1 == "B4" ? " ship" : sendShip2 == "B4" ? " ship" : sendShip3 == "B4" ? " ship" : sendShip4 == "B4" ? " ship" :   "")}>B4</div>
+      <div className={"col-1 B5" + (sendShips == "B5" ? " ship" : sendShip1 == "B5" ? " ship" : sendShip2 == "B5" ? " ship" : sendShip3 == "B5" ? " ship" : sendShip4 == "B5" ? " ship" :   "")}>B5</div>
+      <div className={"col-1 B6" + (sendShips == "B6" ? " ship" : sendShip1 == "B6" ? " ship" : sendShip2 == "B6" ? " ship" : sendShip3 == "B6" ? " ship" : sendShip4 == "B6" ? " ship" :   "")}>B6</div>
+      <div className={"col-1 B7" + (sendShips == "B7" ? " ship" : sendShip1 == "B7" ? " ship" : sendShip2 == "B7" ? " ship" : sendShip3 == "B7" ? " ship" : sendShip4 == "B7" ? " ship" :   "")}>B7</div>
+      <div className={"col-1 B8" + (sendShips == "B8" ? " ship" : sendShip1 == "B8" ? " ship" : sendShip2 == "B8" ? " ship" : sendShip3 == "B8" ? " ship" : sendShip4 == "B8" ? " ship" :   "")}>B8</div>
+      <div className={"col-1 B9" + (sendShips == "B9" ? " ship" : sendShip1 == "B9" ? " ship" : sendShip2 == "B9" ? " ship" : sendShip3 == "B9" ? " ship" : sendShip4 == "B9" ? " ship" :   "")}>B9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">C</div>
-      <div className={"col-1 C1" + (sendShips == "C1" ? " ship" : sendShip1 == "C1" ? " ship" : sendShip2 == "C1" ? " ship" : sendShip3 == "C1" ? " ship" : sendShip4 == "C1" ? " ship" :   "")} onClick={fireTorpedo}>C1</div>
-      <div className={"col-1 C2" + (sendShips == "C2" ? " ship" : sendShip1 == "C2" ? " ship" : sendShip2 == "C2" ? " ship" : sendShip3 == "C2" ? " ship" : sendShip4 == "C2" ? " ship" :   "")} onClick={fireTorpedo}>C2</div>
-      <div className={"col-1 C3" + (sendShips == "C3" ? " ship" : sendShip1 == "C3" ? " ship" : sendShip2 == "C3" ? " ship" : sendShip3 == "C3" ? " ship" : sendShip4 == "C3" ? " ship" :   "")} onClick={fireTorpedo}>C3</div>
-      <div className={"col-1 C4" + (sendShips == "C4" ? " ship" : sendShip1 == "C4" ? " ship" : sendShip2 == "C4" ? " ship" : sendShip3 == "C4" ? " ship" : sendShip4 == "C4" ? " ship" :   "")} onClick={fireTorpedo}>C4</div>
-      <div className={"col-1 C5" + (sendShips == "C5" ? " ship" : sendShip1 == "C5" ? " ship" : sendShip2 == "C5" ? " ship" : sendShip3 == "C5" ? " ship" : sendShip4 == "C5" ? " ship" :   "")} onClick={fireTorpedo}>C5</div>
-      <div className={"col-1 C6" + (sendShips == "C6" ? " ship" : sendShip1 == "C6" ? " ship" : sendShip2 == "C6" ? " ship" : sendShip3 == "C6" ? " ship" : sendShip4 == "C6" ? " ship" :   "")}onClick={fireTorpedo}>C6</div>
-      <div className={"col-1 C7" + (sendShips == "C7" ? " ship" : sendShip1 == "C7" ? " ship" : sendShip2 == "C7" ? " ship" : sendShip3 == "C7" ? " ship" : sendShip4 == "C7" ? " ship" :   "")} onClick={fireTorpedo}>C7</div>
-      <div className={"col-1 C8" + (sendShips == "C8" ? " ship" : sendShip1 == "C8" ? " ship" : sendShip2 == "C8" ? " ship" : sendShip3 == "C8" ? " ship" : sendShip4 == "C8" ? " ship" :   "")} onClick={fireTorpedo}>C8</div>
-      <div className={"col-1 C9" + (sendShips == "C9" ? " ship" : sendShip1 == "C9" ? " ship" : sendShip2 == "C9" ? " ship" : sendShip3 == "C9" ? " ship" : sendShip4 == "C9" ? " ship" :   "")} onClick={fireTorpedo}>C9</div>
+      <div className={"col-1 C1" + (sendShips == "C1" ? " ship" : sendShip1 == "C1" ? " ship" : sendShip2 == "C1" ? " ship" : sendShip3 == "C1" ? " ship" : sendShip4 == "C1" ? " ship" :   "")}>C1</div>
+      <div className={"col-1 C2" + (sendShips == "C2" ? " ship" : sendShip1 == "C2" ? " ship" : sendShip2 == "C2" ? " ship" : sendShip3 == "C2" ? " ship" : sendShip4 == "C2" ? " ship" :   "")}>C2</div>
+      <div className={"col-1 C3" + (sendShips == "C3" ? " ship" : sendShip1 == "C3" ? " ship" : sendShip2 == "C3" ? " ship" : sendShip3 == "C3" ? " ship" : sendShip4 == "C3" ? " ship" :   "")}>C3</div>
+      <div className={"col-1 C4" + (sendShips == "C4" ? " ship" : sendShip1 == "C4" ? " ship" : sendShip2 == "C4" ? " ship" : sendShip3 == "C4" ? " ship" : sendShip4 == "C4" ? " ship" :   "")}>C4</div>
+      <div className={"col-1 C5" + (sendShips == "C5" ? " ship" : sendShip1 == "C5" ? " ship" : sendShip2 == "C5" ? " ship" : sendShip3 == "C5" ? " ship" : sendShip4 == "C5" ? " ship" :   "")}>C5</div>
+      <div className={"col-1 C6" + (sendShips == "C6" ? " ship" : sendShip1 == "C6" ? " ship" : sendShip2 == "C6" ? " ship" : sendShip3 == "C6" ? " ship" : sendShip4 == "C6" ? " ship" :   "")}>C6</div>
+      <div className={"col-1 C7" + (sendShips == "C7" ? " ship" : sendShip1 == "C7" ? " ship" : sendShip2 == "C7" ? " ship" : sendShip3 == "C7" ? " ship" : sendShip4 == "C7" ? " ship" :   "")}>C7</div>
+      <div className={"col-1 C8" + (sendShips == "C8" ? " ship" : sendShip1 == "C8" ? " ship" : sendShip2 == "C8" ? " ship" : sendShip3 == "C8" ? " ship" : sendShip4 == "C8" ? " ship" :   "")}>C8</div>
+      <div className={"col-1 C9" + (sendShips == "C9" ? " ship" : sendShip1 == "C9" ? " ship" : sendShip2 == "C9" ? " ship" : sendShip3 == "C9" ? " ship" : sendShip4 == "C9" ? " ship" :   "")}>C9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">D</div>
@@ -235,9 +238,9 @@ const sendMyShip4 = () => {
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className="col-1 A1" onClick={fireTorpedo}>A1</div>
-      <div className="col-1 A2" onClick={fireTorpedo}>A2</div>
-      <div className="col-1 A3" onClick={fireTorpedo}>A3</div>
+      <div className="col-1 A1" onClick={() => enemyShips.includes("A1") ? " hit" : " miss"}>A1</div>
+      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={() => enemyShips.includes("A2") ? " hit" : " miss"}>A2</div>
+      <div className={"col-1 A3" + (shot == "A3" ? " hit" : " miss")} onClick={() => setShot("A3", ...shot)}>A3</div>
       <div className="col-1 A4" onClick={fireTorpedo}>A4</div>
       <div className="col-1 A5" onClick={fireTorpedo}>A5</div>
       <div className="col-1 A6" onClick={fireTorpedo}>A6</div>

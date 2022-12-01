@@ -1,5 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+body {
+  background-color: rgb(64, 64, 114);
+}
+
+
+
 .col-1 {
   padding: 12px;
   border: 1px;
@@ -30,4 +36,12 @@
 
 .ship {
   background-color: blanchedalmond;
+}
+
+.miss {
+  background-color: aqua;
+}
+
+.hit {
+  background-color: brown;
 }

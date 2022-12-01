@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.col-1 {
+  padding: 12px;
+  border: 1px;
+  color: aquamarine;
+  background-color: rgb(62, 62, 123);
+  border-color: white;
+  border-style: solid;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.row {
+  padding-top: 100px;
+  max-width: 600px;
+}
+
+.blank {
+  border-style: none;
+  background-color: rgb(64, 64, 114);
+}
+
+.gridborder {
+  background-color: rgb(48, 48, 85);
+}
+
+.top {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }

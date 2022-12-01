@@ -18,7 +18,7 @@ setMyShips(e.target.value)
 } 
 
 const sendMyShips = () => {
-setSendShips([myShips,...sendShips])
+setSendShips(myShips,...sendShips)
 }
 
 const placeEnemyShips = () => {
@@ -48,7 +48,7 @@ const placeEnemyShips = () => {
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className="col-1 A1" onClick={fireTorpedo}>A1</div>
+      <div className={"col-1 A1" + (sendShips == "A1" ? " ship" : "")} onClick={fireTorpedo}>A1</div>
       <div className="col-1 A2" onClick={fireTorpedo}>A2</div>
       <div className="col-1 A3" onClick={fireTorpedo}>A3</div>
       <div className="col-1 A4" onClick={fireTorpedo}>A4</div>

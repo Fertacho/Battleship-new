@@ -90,7 +90,7 @@ const sendMyShip4 = () => {
 
 console.log(enemyShips)
   return (<div>
-    <div>ingresa coordenadas</div>
+    <div className='instrucciones'>Ingresa coordenadas para cada barco. Presiona el botón hasta 5 veces para agregar enemigos</div>
     <input onChange={placeMyShips}></input>
     <button onClick={sendMyShips}>submit</button>
     <input onChange={placeMyShips1}></input>

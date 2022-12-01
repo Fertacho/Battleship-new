@@ -16,6 +16,8 @@ const [sendShip2, setSendShip2] = useState([]);
 const [sendShip3, setSendShip3] = useState([]);
 const [sendShip4, setSendShip4] = useState([]);
 
+const [enemyShips, setEnemyShips] = useState([]);
+
 
 const fireTorpedo = () => {
   console.log('attack')
@@ -62,12 +64,24 @@ const sendMyShip4 = () => {
   setSendShip4([myShips4])
  }
 
-const placeEnemyShips = () => {
+ function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+ }
+ 
 
+  
+  let letter = ['A','B','C','D','E','F','G','H','I'];
+  let number = ['1','2','3','4','5','6','7','8','9'];
+  let ships = [];
+  for (let i = 0; i < 5; i++){
+  ships += letter[Math.floor(Math.random() * letter.length)] + number[Math.floor(Math.random() * number.length)];
 }
 
 
-  console.log(sendShips)
+
+
+
+  console.log(ships)
   return (<div>
     <div>ingresa coordenadas</div>
     <input onChange={placeMyShips}></input>
@@ -80,6 +94,7 @@ const placeEnemyShips = () => {
     <button onClick={sendMyShip3}>submit</button>
     <input onChange={placeMyShips4}></input>
     <button onClick={sendMyShip4}>submit</button>
+
 
     
 

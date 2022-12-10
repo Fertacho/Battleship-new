@@ -4,7 +4,9 @@ body {
   background-color: rgb(64, 64, 114);
 }
 
-
+.instrucciones {
+  color: aqua;
+}
 
 .col-1 {
   padding: 12px;

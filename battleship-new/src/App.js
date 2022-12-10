@@ -4,22 +4,24 @@ import { useState} from 'react';
 
 
 function App() {
-
+//constants***************************************************************************************************************//
+//inputs de mis barcos***********************************//
 const [myShips,setMyShips] = useState('');
 const [myShips1,setMyShips1] = useState('');
 const [myShips2,setMyShips2] = useState('');
 const [myShips3,setMyShips3] = useState('');
 const [myShips4,setMyShips4] = useState('');
+//submits de mis barcos***********************************//
 const [sendShips,setSendShips] = useState([]);
 const [sendShip1, setSendShip1] = useState([]);
 const [sendShip2, setSendShip2] = useState([]);
 const [sendShip3, setSendShip3] = useState([]);
 const [sendShip4, setSendShip4] = useState([]);
-
+//Barcos enemigos****************************//
 const [enemyShips, setEnemyShips] = useState([]);
-
-const [shot, setShot] = useState("");
-const [square, setSquare] = useState("");
+//acción de ataque******************//
+const [shot, setShot] = useState([]);
+const [square, setSquare] = useState([]);
 
 const fireTorpedo = () => {
   console.log('attack')
@@ -27,61 +29,49 @@ const fireTorpedo = () => {
 }
 
 const attack = () => {
- setSquare([ships,...shot])
+ setSquare([enemy,...square])
 }
-
+//barcos enemigos**************************//
 const placeEnemyShips = () => {
   setEnemyShips([ships,...enemyShips])
-}
-
-//Mis barcos*************************************************************************************//
-
+}//Mis barcos*************************************************************************************//
 const placeMyShips = (e) => {
 setMyShips(e.target.value)
 } 
-
 const placeMyShips1 = (e) => {
   setMyShips1(e.target.value)
   } 
-
 const placeMyShips2 = (e) => {
     setMyShips2(e.target.value)
     } 
-
 const placeMyShips3 = (e) => {
   setMyShips3(e.target.value)
   } 
-    
 const placeMyShips4 = (e) => {
     setMyShips4(e.target.value)
 }
-
-
 const sendMyShips = () => {
 setSendShips([myShips])
 }
-
 const sendMyShip1 = () => {
   setSendShip1([myShips1])
   }
-
 const sendMyShip2 = () => {
   setSendShip2([myShips2])
   }
-    
 const sendMyShip3 = () => {
   setSendShip3([myShips3])
  }
-    
 const sendMyShip4 = () => {
   setSendShip4([myShips4])
  }
 
 
-  
-  let letter = ['A','B','C','D','E','F','G','H','I'];
-  let number = ['1','2','3','4','5','6','7','8','9'];
-  let ships = [];
+let enemy = [];
+ enemy += enemyShips
+let letter = ['A','B','C','D','E','F','G','H','I'];
+let number = ['1','2','3','4','5','6','7','8','9'];
+let ships = [];
 
   ships += letter[Math.floor(Math.random() * letter.length)] + number[Math.floor(Math.random() * number.length)];
 
@@ -89,6 +79,13 @@ const sendMyShip4 = () => {
 
 
 console.log(enemyShips)
+console.log(shot)
+console.log(square)
+//en orden descendente://
+//inputs para colocar los barcos//
+//botón para colocar los barcos enemigos//
+//tablero del jugador//
+//tablero enemigo//
   return (<div>
     <div className='instrucciones'>Ingresa coordenadas para cada barco. Presiona el botón hasta 5 veces para agregar enemigos</div>
     <input onChange={placeMyShips}></input>
@@ -241,10 +238,10 @@ console.log(enemyShips)
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className="col-1 A1" onClick={attack}>A1</div>
-      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ") + (square.includes("enemy" ? " hit" : "miss"))} onClick={attack}>A2</div>
+      <div className={"col-1 A1" + (enemyShips.includes("A1") ? " enemy" : " ")} onClick={() => setSquare("A1", ...square)}>A1</div>
+      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={() => setSquare("A2", ...square)}>A2</div>
       <div className={"col-1 A3" + (shot == "A3" ? " hit" : " miss")} onClick={() => setShot("A3", ...shot)}>A3</div>
-      <div className="col-1 A4" onClick={fireTorpedo}>A4</div>
+      <div className={"col-1 A4" + (shot == "A4" ? " hit" : " miss")} onClick={() => setShot("A4", ...shot)}>A4</div>
       <div className="col-1 A5" onClick={fireTorpedo}>A5</div>
       <div className="col-1 A6" onClick={fireTorpedo}>A6</div>
       <div className="col-1 A7" onClick={fireTorpedo}>A7</div>

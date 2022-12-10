@@ -248,7 +248,7 @@ console.log(enemy)
       <div className="col-1 gridborder side">A</div>
       <div className={"col-1 A1" + (enemyShips.includes("A1") ? " enemy" : " ")} onClick={attack}>A1</div>
       <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={attack}>A2</div>
-      <div className={"col-1 A3" + (shot3 == "hit" ? " hit" : shot3 == "miss" ? " miss": " ")} onClick={() => setShot3(enemyShips.includes("A3" ? " hit" : " miss"))}>A3</div>
+      <div className={"col-1 A3" + (shot3 == "hit" ? " hit" : shot3 == "miss" ? " miss": " ")} onClick={() => setShot3(enemyShips.includes("A3") ? "hit" : "miss")}>A3</div>
       <div className={"col-1 A4" + (shot4 == "A4" ? " hit" : " miss")} onClick={() => setShot4("A4", ...shot4)}>A4</div>
       <div className="col-1 A5" onClick={fireTorpedo}>A5</div>
       <div className="col-1 A6" onClick={fireTorpedo}>A6</div>

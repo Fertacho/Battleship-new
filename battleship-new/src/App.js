@@ -20,7 +20,9 @@ const [sendShip4, setSendShip4] = useState([]);
 //Barcos enemigos****************************//
 const [enemyShips, setEnemyShips] = useState([]);
 //acción de ataque******************//
-const [shot, setShot] = useState([]);
+const [enemy, setEnemy] = useState([]);
+const [shot3, setShot3] = useState([]);
+const [shot4, setShot4] = useState([]);
 const [square, setSquare] = useState([]);
 
 const fireTorpedo = () => {
@@ -28,13 +30,17 @@ const fireTorpedo = () => {
   
 }
 
-const attack = () => {
- setSquare([enemy,...square])
+const attack = (className) => {
+ if (className == "enemy") {
+  return className += "hit"
+ } else {
+  className += "miss"
+ }
 }
-//barcos enemigos**************************//
+//posicionar barcos enemigos**************************//
 const placeEnemyShips = () => {
   setEnemyShips([ships,...enemyShips])
-}//Mis barcos*************************************************************************************//
+}//posicionar Mis barcos*************************************************************************************//
 const placeMyShips = (e) => {
 setMyShips(e.target.value)
 } 
@@ -67,8 +73,7 @@ const sendMyShip4 = () => {
  }
 
 
-let enemy = [];
- enemy += enemyShips
+
 let letter = ['A','B','C','D','E','F','G','H','I'];
 let number = ['1','2','3','4','5','6','7','8','9'];
 let ships = [];
@@ -79,8 +84,11 @@ let ships = [];
 
 
 console.log(enemyShips)
-console.log(shot)
+console.log(shot3)
+console.log(shot4)
 console.log(square)
+console.log(ships)
+console.log(enemy)
 //en orden descendente://
 //inputs para colocar los barcos//
 //botón para colocar los barcos enemigos//
@@ -238,10 +246,10 @@ console.log(square)
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className={"col-1 A1" + (enemyShips.includes("A1") ? " enemy" : " ")} onClick={() => setSquare("A1", ...square)}>A1</div>
-      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={() => setSquare("A2", ...square)}>A2</div>
-      <div className={"col-1 A3" + (shot == "A3" ? " hit" : " miss")} onClick={() => setShot("A3", ...shot)}>A3</div>
-      <div className={"col-1 A4" + (shot == "A4" ? " hit" : " miss")} onClick={() => setShot("A4", ...shot)}>A4</div>
+      <div className={"col-1 A1" + (enemyShips.includes("A1") ? " enemy" : " ")} onClick={attack}>A1</div>
+      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={attack}>A2</div>
+      <div className={"col-1 A3" + (shot3 == "hit" ? " hit" : shot3 == "miss" ? " miss": " ")} onClick={() => setShot3(enemyShips.includes("A3" ? " hit" : " miss"))}>A3</div>
+      <div className={"col-1 A4" + (shot4 == "A4" ? " hit" : " miss")} onClick={() => setShot4("A4", ...shot4)}>A4</div>
       <div className="col-1 A5" onClick={fireTorpedo}>A5</div>
       <div className="col-1 A6" onClick={fireTorpedo}>A6</div>
       <div className="col-1 A7" onClick={fireTorpedo}>A7</div>

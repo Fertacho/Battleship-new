@@ -20,23 +20,93 @@ const [sendShip4, setSendShip4] = useState([]);
 //Barcos enemigos****************************//
 const [enemyShips, setEnemyShips] = useState([]);
 //acción de ataque******************//
-const [enemy, setEnemy] = useState([]);
-const [shot3, setShot3] = useState([]);
-const [shot4, setShot4] = useState([]);
-const [square, setSquare] = useState([]);
+const [shotA1, setShotA1] = useState([]);
+const [shotA2, setShotA2] = useState([]);
+const [shotA3, setShotA3] = useState([]);
+const [shotA4, setShotA4] = useState([]);
+const [shotA5, setShotA5] = useState([]);
+const [shotA6, setShotA6] = useState([]);
+const [shotA7, setShotA7] = useState([]);
+const [shotA8, setShotA8] = useState([]);
+const [shotA9, setShotA9] = useState([]);
+const [shotB1, setShotB1] = useState([]);
+const [shotB2, setShotB2] = useState([]);
+const [shotB3, setShotB3] = useState([]);
+const [shotB4, setShotB4] = useState([]);
+const [shotB5, setShotB5] = useState([]);
+const [shotB6, setShotB6] = useState([]);
+const [shotB7, setShotB7] = useState([]);
+const [shotB8, setShotB8] = useState([]);
+const [shotB9, setShotB9] = useState([]);
+const [shotC1, setShotC1] = useState([]);
+const [shotC2, setShotC2] = useState([]);
+const [shotC3, setShotC3] = useState([]);
+const [shotC4, setShotC4] = useState([]);
+const [shotC5, setShotC5] = useState([]);
+const [shotC6, setShotC6] = useState([]);
+const [shotC7, setShotC7] = useState([]);
+const [shotC8, setShotC8] = useState([]);
+const [shotC9, setShotC9] = useState([]);
+const [shotD1, setShotD1] = useState([]);
+const [shotD2, setShotD2] = useState([]);
+const [shotD3, setShotD3] = useState([]);
+const [shotD4, setShotD4] = useState([]);
+const [shotD5, setShotD5] = useState([]);
+const [shotD6, setShotD6] = useState([]);
+const [shotD7, setShotD7] = useState([]);
+const [shotD8, setShotD8] = useState([]);
+const [shotD9, setShotD9] = useState([]);
+const [shotE1, setShotE1] = useState([]);
+const [shotE2, setShotE2] = useState([]);
+const [shotE3, setShotE3] = useState([]);
+const [shotE4, setShotE4] = useState([]);
+const [shotE5, setShotE5] = useState([]);
+const [shotE6, setShotE6] = useState([]);
+const [shotE7, setShotE7] = useState([]);
+const [shotE8, setShotE8] = useState([]);
+const [shotE9, setShotE9] = useState([]);
+const [shotF1, setShotF1] = useState([]);
+const [shotF2, setShotF2] = useState([]);
+const [shotF3, setShotF3] = useState([]);
+const [shotF4, setShotF4] = useState([]);
+const [shotF5, setShotF5] = useState([]);
+const [shotF6, setShotF6] = useState([]);
+const [shotF7, setShotF7] = useState([]);
+const [shotF8, setShotF8] = useState([]);
+const [shotF9, setShotF9] = useState([]);
+const [shotG1, setShotG1] = useState([]);
+const [shotG2, setShotG2] = useState([]);
+const [shotG3, setShotG3] = useState([]);
+const [shotG4, setShotG4] = useState([]);
+const [shotG5, setShotG5] = useState([]);
+const [shotG6, setShotG6] = useState([]);
+const [shotG7, setShotG7] = useState([]);
+const [shotG8, setShotG8] = useState([]);
+const [shotG9, setShotG9] = useState([]);
+const [shotH1, setShotH1] = useState([]);
+const [shotH2, setShotH2] = useState([]);
+const [shotH3, setShotH3] = useState([]);
+const [shotH4, setShotH4] = useState([]);
+const [shotH5, setShotH5] = useState([]);
+const [shotH6, setShotH6] = useState([]);
+const [shotH7, setShotH7] = useState([]);
+const [shotH8, setShotH8] = useState([]);
+const [shotH9, setShotH9] = useState([]);
+const [shotI1, setShotI1] = useState([]);
+const [shotI2, setShotI2] = useState([]);
+const [shotI3, setShotI3] = useState([]);
+const [shotI4, setShotI4] = useState([]);
+const [shotI5, setShotI5] = useState([]);
+const [shotI6, setShotI6] = useState([]);
+const [shotI7, setShotI7] = useState([]);
+const [shotI8, setShotI8] = useState([]);
+const [shotI9, setShotI9] = useState([]);
 
 const fireTorpedo = () => {
   console.log('attack')
   
 }
 
-const attack = (className) => {
- if (className == "enemy") {
-  return className += "hit"
- } else {
-  className += "miss"
- }
-}
 //posicionar barcos enemigos**************************//
 const placeEnemyShips = () => {
   setEnemyShips([ships,...enemyShips])
@@ -84,11 +154,9 @@ let ships = [];
 
 
 console.log(enemyShips)
-console.log(shot3)
-console.log(shot4)
-console.log(square)
+console.log(shotA3)
+console.log(shotA4)
 console.log(ships)
-console.log(enemy)
 //en orden descendente://
 //inputs para colocar los barcos//
 //botón para colocar los barcos enemigos//
@@ -246,111 +314,111 @@ console.log(enemy)
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">A</div>
-      <div className={"col-1 A1" + (enemyShips.includes("A1") ? " enemy" : " ")} onClick={attack}>A1</div>
-      <div className={"col-1 A2" + (enemyShips.includes("A2") ? " enemy" : " ")} onClick={attack}>A2</div>
-      <div className={"col-1 A3" + (shot3 == "hit" ? " hit" : shot3 == "miss" ? " miss": " ")} onClick={() => setShot3(enemyShips.includes("A3") ? "hit" : "miss")}>A3</div>
-      <div className={"col-1 A4" + (shot4 == "A4" ? " hit" : " miss")} onClick={() => setShot4("A4", ...shot4)}>A4</div>
-      <div className="col-1 A5" onClick={fireTorpedo}>A5</div>
-      <div className="col-1 A6" onClick={fireTorpedo}>A6</div>
-      <div className="col-1 A7" onClick={fireTorpedo}>A7</div>
-      <div className="col-1 A8" onClick={fireTorpedo}>A8</div>
-      <div className="col-1 A9" onClick={fireTorpedo}>A9</div>
+      <div className={"col-1 A1" + (shotA1 == "hit" ? " hit" : shotA1 == "miss" ? " miss": " ")} onClick={() => setShotA1(enemyShips.includes("A1") ? "hit" : "miss")}>A1</div>
+      <div className={"col-1 A2" + (shotA2 == "hit" ? " hit" : shotA2 == "miss" ? " miss": " ")} onClick={() => setShotA2(enemyShips.includes("A2") ? "hit" : "miss")}>A2</div>
+      <div className={"col-1 A3" + (shotA3 == "hit" ? " hit" : shotA3 == "miss" ? " miss": " ")} onClick={() => setShotA3(enemyShips.includes("A3") ? "hit" : "miss")}>A3</div>
+      <div className={"col-1 A4" + (shotA4 == "hit" ? " hit" : shotA4 == "miss" ? " miss": " ")} onClick={() => setShotA4(enemyShips.includes("A4") ? "hit" : "miss")}>A4</div>
+      <div className={"col-1 A5" + (shotA5 == "hit" ? " hit" : shotA5 == "miss" ? " miss": " ")} onClick={() => setShotA5(enemyShips.includes("A5") ? "hit" : "miss")}>A5</div>
+      <div className={"col-1 A6" + (shotA6 == "hit" ? " hit" : shotA6 == "miss" ? " miss": " ")} onClick={() => setShotA6(enemyShips.includes("A6") ? "hit" : "miss")}>A6</div>
+      <div className={"col-1 A7" + (shotA7 == "hit" ? " hit" : shotA7 == "miss" ? " miss": " ")} onClick={() => setShotA7(enemyShips.includes("A7") ? "hit" : "miss")}>A7</div>
+      <div className={"col-1 A8" + (shotA8 == "hit" ? " hit" : shotA8 == "miss" ? " miss": " ")} onClick={() => setShotA8(enemyShips.includes("A8") ? "hit" : "miss")}>A8</div>
+      <div className={"col-1 A9" + (shotA9 == "hit" ? " hit" : shotA9 == "miss" ? " miss": " ")} onClick={() => setShotA9(enemyShips.includes("A9") ? "hit" : "miss")}>A9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">B</div>
-      <div className="col-1 B1" onClick={fireTorpedo}>B1</div>
-      <div className="col-1 B2" onClick={fireTorpedo}>B2</div>
-      <div className="col-1 B3" onClick={fireTorpedo}>B3</div>
-      <div className="col-1 B4" onClick={fireTorpedo}>B4</div>
-      <div className="col-1 B5" onClick={fireTorpedo}>B5</div>
-      <div className="col-1 B6" onClick={fireTorpedo}>B6</div>
-      <div className="col-1 B7" onClick={fireTorpedo}>B7</div>
-      <div className="col-1 B8" onClick={fireTorpedo}>B8</div>
-      <div className="col-1 B9" onClick={fireTorpedo}>B9</div>
+      <div className={"col-1 B1" + (shotB1 == "hit" ? " hit" : shotB1 == "miss" ? " miss": " ")} onClick={() => setShotB1(enemyShips.includes("B1") ? "hit" : "miss")}>B1</div>
+      <div className={"col-1 B2" + (shotB2 == "hit" ? " hit" : shotB2 == "miss" ? " miss": " ")} onClick={() => setShotB2(enemyShips.includes("B2") ? "hit" : "miss")}>B2</div>
+      <div className={"col-1 B3" + (shotB3 == "hit" ? " hit" : shotB3 == "miss" ? " miss": " ")} onClick={() => setShotB3(enemyShips.includes("B3") ? "hit" : "miss")}>B3</div>
+      <div className={"col-1 B4" + (shotB4 == "hit" ? " hit" : shotB4 == "miss" ? " miss": " ")} onClick={() => setShotB4(enemyShips.includes("B4") ? "hit" : "miss")}>B4</div>
+      <div className={"col-1 B5" + (shotB5 == "hit" ? " hit" : shotB5 == "miss" ? " miss": " ")} onClick={() => setShotB5(enemyShips.includes("B5") ? "hit" : "miss")}>B5</div>
+      <div className={"col-1 B6" + (shotB6 == "hit" ? " hit" : shotB6 == "miss" ? " miss": " ")} onClick={() => setShotB6(enemyShips.includes("B6") ? "hit" : "miss")}>B6</div>
+      <div className={"col-1 B7" + (shotB7 == "hit" ? " hit" : shotB7 == "miss" ? " miss": " ")} onClick={() => setShotB7(enemyShips.includes("B7") ? "hit" : "miss")}>B7</div>
+      <div className={"col-1 B8" + (shotB8 == "hit" ? " hit" : shotB8 == "miss" ? " miss": " ")} onClick={() => setShotB8(enemyShips.includes("B8") ? "hit" : "miss")}>B8</div>
+      <div className={"col-1 B9" + (shotB9 == "hit" ? " hit" : shotB9 == "miss" ? " miss": " ")} onClick={() => setShotB9(enemyShips.includes("B9") ? "hit" : "miss")}>B9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">C</div>
-      <div className="col-1 C1" onClick={fireTorpedo}>C1</div>
-      <div className="col-1 C2" onClick={fireTorpedo}>C2</div>
-      <div className="col-1 C3" onClick={fireTorpedo}>C3</div>
-      <div className="col-1 C4" onClick={fireTorpedo}>C4</div>
-      <div className="col-1 C5" onClick={fireTorpedo}>C5</div>
-      <div className="col-1 C6" onClick={fireTorpedo}>C6</div>
-      <div className="col-1 C7" onClick={fireTorpedo}>C7</div>
-      <div className="col-1 C8" onClick={fireTorpedo}>C8</div>
-      <div className="col-1 C9" onClick={fireTorpedo}>C9</div>
+      <div className={"col-1 C1" + (shotC1 == "hit" ? " hit" : shotC1 == "miss" ? " miss": " ")} onClick={() => setShotC1(enemyShips.includes("C1") ? "hit" : "miss")}>C1</div>
+      <div className={"col-1 C2" + (shotC2 == "hit" ? " hit" : shotC2 == "miss" ? " miss": " ")} onClick={() => setShotC2(enemyShips.includes("C2") ? "hit" : "miss")}>C2</div>
+      <div className={"col-1 C3" + (shotC3 == "hit" ? " hit" : shotC3 == "miss" ? " miss": " ")} onClick={() => setShotC3(enemyShips.includes("C3") ? "hit" : "miss")}>C3</div>
+      <div className={"col-1 C4" + (shotC4 == "hit" ? " hit" : shotC4 == "miss" ? " miss": " ")} onClick={() => setShotC4(enemyShips.includes("C4") ? "hit" : "miss")}>C4</div>
+      <div className={"col-1 C5" + (shotC5 == "hit" ? " hit" : shotC5 == "miss" ? " miss": " ")} onClick={() => setShotC5(enemyShips.includes("C5") ? "hit" : "miss")}>C5</div>
+      <div className={"col-1 C6" + (shotC6 == "hit" ? " hit" : shotC6 == "miss" ? " miss": " ")} onClick={() => setShotC6(enemyShips.includes("C6") ? "hit" : "miss")}>C6</div>
+      <div className={"col-1 C7" + (shotC7 == "hit" ? " hit" : shotC7 == "miss" ? " miss": " ")} onClick={() => setShotC7(enemyShips.includes("C7") ? "hit" : "miss")}>C7</div>
+      <div className={"col-1 C8" + (shotC8 == "hit" ? " hit" : shotC8 == "miss" ? " miss": " ")} onClick={() => setShotC8(enemyShips.includes("C8") ? "hit" : "miss")}>C8</div>
+      <div className={"col-1 C9" + (shotC9 == "hit" ? " hit" : shotC9 == "miss" ? " miss": " ")} onClick={() => setShotC9(enemyShips.includes("C9") ? "hit" : "miss")}>C9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">D</div>
-      <div className="col-1 D1" onClick={fireTorpedo}>D1</div>
-      <div className="col-1 D2" onClick={fireTorpedo}>D2</div>
-      <div className="col-1 D3" onClick={fireTorpedo}>D3</div>
-      <div className="col-1 D4" onClick={fireTorpedo}>D4</div>
-      <div className="col-1 D5" onClick={fireTorpedo}>D5</div>
-      <div className="col-1 D6" onClick={fireTorpedo}>D6</div>
-      <div className="col-1 D7" onClick={fireTorpedo}>D7</div>
-      <div className="col-1 D8" onClick={fireTorpedo}>D8</div>
-      <div className="col-1 D9" onClick={fireTorpedo}>D9</div>
+      <div className={"col-1 D1" + (shotD1 == "hit" ? " hit" : shotD1 == "miss" ? " miss": " ")} onClick={() => setShotD1(enemyShips.includes("D1") ? "hit" : "miss")}>D1</div>
+      <div className={"col-1 D2" + (shotD2 == "hit" ? " hit" : shotD2 == "miss" ? " miss": " ")} onClick={() => setShotD2(enemyShips.includes("D2") ? "hit" : "miss")}>D2</div>
+      <div className={"col-1 D3" + (shotD3 == "hit" ? " hit" : shotD3 == "miss" ? " miss": " ")} onClick={() => setShotD3(enemyShips.includes("D3") ? "hit" : "miss")}>D3</div>
+      <div className={"col-1 D4" + (shotD4 == "hit" ? " hit" : shotD4 == "miss" ? " miss": " ")} onClick={() => setShotD4(enemyShips.includes("D4") ? "hit" : "miss")}>D4</div>
+      <div className={"col-1 D5" + (shotD5 == "hit" ? " hit" : shotD5 == "miss" ? " miss": " ")} onClick={() => setShotD5(enemyShips.includes("D5") ? "hit" : "miss")}>D5</div>
+      <div className={"col-1 D6" + (shotD6 == "hit" ? " hit" : shotD6 == "miss" ? " miss": " ")} onClick={() => setShotD6(enemyShips.includes("D6") ? "hit" : "miss")}>D6</div>
+      <div className={"col-1 D7" + (shotD7 == "hit" ? " hit" : shotD7 == "miss" ? " miss": " ")} onClick={() => setShotD7(enemyShips.includes("D7") ? "hit" : "miss")}>D7</div>
+      <div className={"col-1 D8" + (shotD8 == "hit" ? " hit" : shotD8 == "miss" ? " miss": " ")} onClick={() => setShotD8(enemyShips.includes("D8") ? "hit" : "miss")}>D8</div>
+      <div className={"col-1 D9" + (shotD9 == "hit" ? " hit" : shotD9 == "miss" ? " miss": " ")} onClick={() => setShotD9(enemyShips.includes("D9") ? "hit" : "miss")}>D9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">E</div>
-      <div className="col-1 E1" onClick={fireTorpedo}>E1</div>
-      <div className="col-1 E2" onClick={fireTorpedo}>E2</div>
-      <div className="col-1 E3" onClick={fireTorpedo}>E3</div>
-      <div className="col-1 E4" onClick={fireTorpedo}>E4</div>
-      <div className="col-1 E5" onClick={fireTorpedo}>E5</div>
-      <div className="col-1 E6" onClick={fireTorpedo}>E6</div>
-      <div className="col-1 E7" onClick={fireTorpedo}>E7</div>
-      <div className="col-1 E8" onClick={fireTorpedo}>E8</div>
-      <div className="col-1 E9" onClick={fireTorpedo}>E9</div>
+      <div className={"col-1 E1" + (shotE1 == "hit" ? " hit" : shotE1 == "miss" ? " miss": " ")} onClick={() => setShotE1(enemyShips.includes("E1") ? "hit" : "miss")}>E1</div>
+      <div className={"col-1 E2" + (shotE2 == "hit" ? " hit" : shotE2 == "miss" ? " miss": " ")} onClick={() => setShotE2(enemyShips.includes("E2") ? "hit" : "miss")}>E2</div>
+      <div className={"col-1 E3" + (shotE3 == "hit" ? " hit" : shotE3 == "miss" ? " miss": " ")} onClick={() => setShotE3(enemyShips.includes("E3") ? "hit" : "miss")}>E3</div>
+      <div className={"col-1 E4" + (shotE4 == "hit" ? " hit" : shotE4 == "miss" ? " miss": " ")} onClick={() => setShotE4(enemyShips.includes("E4") ? "hit" : "miss")}>E4</div>
+      <div className={"col-1 E5" + (shotE5 == "hit" ? " hit" : shotE5 == "miss" ? " miss": " ")} onClick={() => setShotE5(enemyShips.includes("E5") ? "hit" : "miss")}>E5</div>
+      <div className={"col-1 E6" + (shotE6 == "hit" ? " hit" : shotE6 == "miss" ? " miss": " ")} onClick={() => setShotE6(enemyShips.includes("E6") ? "hit" : "miss")}>E6</div>
+      <div className={"col-1 E7" + (shotE7 == "hit" ? " hit" : shotE7 == "miss" ? " miss": " ")} onClick={() => setShotE7(enemyShips.includes("E7") ? "hit" : "miss")}>E7</div>
+      <div className={"col-1 E8" + (shotE8 == "hit" ? " hit" : shotE8 == "miss" ? " miss": " ")} onClick={() => setShotE8(enemyShips.includes("E8") ? "hit" : "miss")}>E8</div>
+      <div className={"col-1 E9" + (shotE9 == "hit" ? " hit" : shotE9 == "miss" ? " miss": " ")} onClick={() => setShotE9(enemyShips.includes("E9") ? "hit" : "miss")}>E9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">F</div>
-      <div className="col-1 F1" onClick={fireTorpedo}>F1</div>
-      <div className="col-1 F2" onClick={fireTorpedo}>F2</div>
-      <div className="col-1 F3" onClick={fireTorpedo}>F3</div>
-      <div className="col-1 F4" onClick={fireTorpedo}>F4</div>
-      <div className="col-1 F5" onClick={fireTorpedo}>F5</div>
-      <div className="col-1 F6" onClick={fireTorpedo}>F6</div>
-      <div className="col-1 F7" onClick={fireTorpedo}>F7</div>
-      <div className="col-1 F8" onClick={fireTorpedo}>F8</div>
-      <div className="col-1 F9" onClick={fireTorpedo}>F9</div>
+      <div className={"col-1 F1" + (shotF1 == "hit" ? " hit" : shotF1 == "miss" ? " miss": " ")} onClick={() => setShotF1(enemyShips.includes("F1") ? "hit" : "miss")}>F1</div>
+      <div className={"col-1 F2" + (shotF2 == "hit" ? " hit" : shotF2 == "miss" ? " miss": " ")} onClick={() => setShotF2(enemyShips.includes("F2") ? "hit" : "miss")}>F2</div>
+      <div className={"col-1 F3" + (shotF3 == "hit" ? " hit" : shotF3 == "miss" ? " miss": " ")} onClick={() => setShotF3(enemyShips.includes("F3") ? "hit" : "miss")}>F3</div>
+      <div className={"col-1 F4" + (shotF4 == "hit" ? " hit" : shotF4 == "miss" ? " miss": " ")} onClick={() => setShotF4(enemyShips.includes("F4") ? "hit" : "miss")}>F4</div>
+      <div className={"col-1 F5" + (shotF5 == "hit" ? " hit" : shotF5 == "miss" ? " miss": " ")} onClick={() => setShotF5(enemyShips.includes("F5") ? "hit" : "miss")}>F5</div>
+      <div className={"col-1 F6" + (shotF6 == "hit" ? " hit" : shotF6 == "miss" ? " miss": " ")} onClick={() => setShotF6(enemyShips.includes("F6") ? "hit" : "miss")}>F6</div>
+      <div className={"col-1 F7" + (shotF7 == "hit" ? " hit" : shotF7 == "miss" ? " miss": " ")} onClick={() => setShotF7(enemyShips.includes("F7") ? "hit" : "miss")}>F7</div>
+      <div className={"col-1 F8" + (shotF8 == "hit" ? " hit" : shotF8 == "miss" ? " miss": " ")} onClick={() => setShotF8(enemyShips.includes("F8") ? "hit" : "miss")}>F8</div>
+      <div className={"col-1 F9" + (shotF9 == "hit" ? " hit" : shotF9 == "miss" ? " miss": " ")} onClick={() => setShotF9(enemyShips.includes("F9") ? "hit" : "miss")}>F9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">G</div>
-      <div className="col-1 G1" onClick={fireTorpedo}>G1</div>
-      <div className="col-1 G2" onClick={fireTorpedo}>G2</div>
-      <div className="col-1 G3" onClick={fireTorpedo}>G3</div>
-      <div className="col-1 G4" onClick={fireTorpedo}>G4</div>
-      <div className="col-1 G5" onClick={fireTorpedo}>G5</div>
-      <div className="col-1 G6" onClick={fireTorpedo}>G6</div>
-      <div className="col-1 G7" onClick={fireTorpedo}>G7</div>
-      <div className="col-1 G8" onClick={fireTorpedo}>G8</div>
-      <div className="col-1 G9" onClick={fireTorpedo}>G9</div>
+      <div className={"col-1 G1" + (shotG1 == "hit" ? " hit" : shotG1 == "miss" ? " miss": " ")} onClick={() => setShotG1(enemyShips.includes("G1") ? "hit" : "miss")}>G1</div>
+      <div className={"col-1 G2" + (shotG2 == "hit" ? " hit" : shotG2 == "miss" ? " miss": " ")} onClick={() => setShotG2(enemyShips.includes("G2") ? "hit" : "miss")}>G2</div>
+      <div className={"col-1 G3" + (shotG3 == "hit" ? " hit" : shotG3 == "miss" ? " miss": " ")} onClick={() => setShotG3(enemyShips.includes("G3") ? "hit" : "miss")}>G3</div>
+      <div className={"col-1 G4" + (shotG4 == "hit" ? " hit" : shotG4 == "miss" ? " miss": " ")} onClick={() => setShotG4(enemyShips.includes("G4") ? "hit" : "miss")}>G4</div>
+      <div className={"col-1 G5" + (shotG5 == "hit" ? " hit" : shotG5 == "miss" ? " miss": " ")} onClick={() => setShotG5(enemyShips.includes("G5") ? "hit" : "miss")}>G5</div>
+      <div className={"col-1 G6" + (shotG6 == "hit" ? " hit" : shotG6 == "miss" ? " miss": " ")} onClick={() => setShotG6(enemyShips.includes("G6") ? "hit" : "miss")}>G6</div>
+      <div className={"col-1 G7" + (shotG7 == "hit" ? " hit" : shotG7 == "miss" ? " miss": " ")} onClick={() => setShotG7(enemyShips.includes("G7") ? "hit" : "miss")}>G7</div>
+      <div className={"col-1 G8" + (shotG8 == "hit" ? " hit" : shotG8 == "miss" ? " miss": " ")} onClick={() => setShotG8(enemyShips.includes("G8") ? "hit" : "miss")}>G8</div>
+      <div className={"col-1 G9" + (shotG9 == "hit" ? " hit" : shotG9 == "miss" ? " miss": " ")} onClick={() => setShotG9(enemyShips.includes("G9") ? "hit" : "miss")}>G9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">H</div>
-      <div className="col-1 H1" onClick={fireTorpedo}>H1</div>
-      <div className="col-1 H2" onClick={fireTorpedo}>H2</div>
-      <div className="col-1 H3" onClick={fireTorpedo}>H3</div>
-      <div className="col-1 H4" onClick={fireTorpedo}>H4</div>
-      <div className="col-1 H5" onClick={fireTorpedo}>H5</div>
-      <div className="col-1 H6" onClick={fireTorpedo}>H6</div>
-      <div className="col-1 H7" onClick={fireTorpedo}>H7</div>
-      <div className="col-1 H8" onClick={fireTorpedo}>H8</div>
-      <div className="col-1 H9" onClick={fireTorpedo}>H9</div>
+      <div className={"col-1 H1" + (shotH1 == "hit" ? " hit" : shotH1 == "miss" ? " miss": " ")} onClick={() => setShotH1(enemyShips.includes("H1") ? "hit" : "miss")}>H1</div>
+      <div className={"col-1 H2" + (shotH2 == "hit" ? " hit" : shotH2 == "miss" ? " miss": " ")} onClick={() => setShotH2(enemyShips.includes("H2") ? "hit" : "miss")}>H2</div>
+      <div className={"col-1 H3" + (shotH3 == "hit" ? " hit" : shotH3 == "miss" ? " miss": " ")} onClick={() => setShotH3(enemyShips.includes("H3") ? "hit" : "miss")}>H3</div>
+      <div className={"col-1 H4" + (shotH4 == "hit" ? " hit" : shotH4 == "miss" ? " miss": " ")} onClick={() => setShotH4(enemyShips.includes("H4") ? "hit" : "miss")}>H4</div>
+      <div className={"col-1 H5" + (shotH5 == "hit" ? " hit" : shotH5 == "miss" ? " miss": " ")} onClick={() => setShotH5(enemyShips.includes("H5") ? "hit" : "miss")}>H5</div>
+      <div className={"col-1 H6" + (shotH6 == "hit" ? " hit" : shotH6 == "miss" ? " miss": " ")} onClick={() => setShotH6(enemyShips.includes("H6") ? "hit" : "miss")}>H6</div>
+      <div className={"col-1 H7" + (shotH7 == "hit" ? " hit" : shotH7 == "miss" ? " miss": " ")} onClick={() => setShotH7(enemyShips.includes("H7") ? "hit" : "miss")}>H7</div>
+      <div className={"col-1 H8" + (shotH8 == "hit" ? " hit" : shotH8 == "miss" ? " miss": " ")} onClick={() => setShotH8(enemyShips.includes("H8") ? "hit" : "miss")}>H8</div>
+      <div className={"col-1 H9" + (shotH9 == "hit" ? " hit" : shotH9 == "miss" ? " miss": " ")} onClick={() => setShotH9(enemyShips.includes("H9") ? "hit" : "miss")}>H9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
       <div className="col-1 gridborder side">I</div>
-      <div className="col-1 I1" onClick={fireTorpedo}>I1</div>
-      <div className="col-1 I2" onClick={fireTorpedo}>I2</div>
-      <div className="col-1 I3" onClick={fireTorpedo}>I3</div>
-      <div className="col-1 I4" onClick={fireTorpedo}>I4</div>
-      <div className="col-1 I5" onClick={fireTorpedo}>I5</div>
-      <div className="col-1 I6" onClick={fireTorpedo}>I6</div>
-      <div className="col-1 I7" onClick={fireTorpedo}>I7</div>
-      <div className="col-1 I8" onClick={fireTorpedo}>I8</div>
-      <div className="col-1 I9" onClick={fireTorpedo}>I9</div>
+      <div className={"col-1 I1" + (shotI1 == "hit" ? " hit" : shotI1 == "miss" ? " miss": " ")} onClick={() => setShotI1(enemyShips.includes("I1") ? "hit" : "miss")}>I1</div>
+      <div className={"col-1 I2" + (shotI2 == "hit" ? " hit" : shotI2 == "miss" ? " miss": " ")} onClick={() => setShotI2(enemyShips.includes("I2") ? "hit" : "miss")}>I2</div>
+      <div className={"col-1 I3" + (shotI3 == "hit" ? " hit" : shotI3 == "miss" ? " miss": " ")} onClick={() => setShotI3(enemyShips.includes("I3") ? "hit" : "miss")}>I3</div>
+      <div className={"col-1 I4" + (shotI4 == "hit" ? " hit" : shotI4 == "miss" ? " miss": " ")} onClick={() => setShotI4(enemyShips.includes("I4") ? "hit" : "miss")}>I4</div>
+      <div className={"col-1 I5" + (shotI5 == "hit" ? " hit" : shotI5 == "miss" ? " miss": " ")} onClick={() => setShotI5(enemyShips.includes("I5") ? "hit" : "miss")}>I5</div>
+      <div className={"col-1 I6" + (shotI6 == "hit" ? " hit" : shotI6 == "miss" ? " miss": " ")} onClick={() => setShotI6(enemyShips.includes("I6") ? "hit" : "miss")}>I6</div>
+      <div className={"col-1 I7" + (shotI7 == "hit" ? " hit" : shotI7 == "miss" ? " miss": " ")} onClick={() => setShotI7(enemyShips.includes("I7") ? "hit" : "miss")}>I7</div>
+      <div className={"col-1 I8" + (shotI8 == "hit" ? " hit" : shotI8 == "miss" ? " miss": " ")} onClick={() => setShotI8(enemyShips.includes("I8") ? "hit" : "miss")}>I8</div>
+      <div className={"col-1 I9" + (shotI9 == "hit" ? " hit" : shotI9 == "miss" ? " miss": " ")} onClick={() => setShotI9(enemyShips.includes("I9") ? "hit" : "miss")}>I9</div>
       <div className="col-1 blank"></div>
       <div className="col-1 blank"></div>
     </div>

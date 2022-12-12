@@ -42,8 +42,10 @@ body {
 
 .miss {
   background-color: aqua;
+  transition: all 0.5s;
 }
 
 .hit {
   background-color: brown;
+  transition: all 0.5s;
 }

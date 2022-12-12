@@ -43,6 +43,7 @@ body {
 .miss {
   background-color: aqua;
   transition: all 0.5s;
+  transform: scale(0.1);
 }
 
 .hit {

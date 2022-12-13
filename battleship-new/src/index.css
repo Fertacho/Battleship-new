@@ -50,3 +50,19 @@ body {
   background-color: brown;
   transition: all 0.5s;
 }
+
+.gameover {
+  background-color: rgb(64, 64, 114);
+  color: rgb(64, 64, 114);
+}
+
+.YouWin {
+  font-size: 100px;
+  color: gold;
+  content: "asd";
+}
+
+.YouLose {
+  font-size: 100px;
+  color: black;
+}

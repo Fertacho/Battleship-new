@@ -11,14 +11,20 @@ const [myShips1,setMyShips1] = useState('');
 const [myShips2,setMyShips2] = useState('');
 const [myShips3,setMyShips3] = useState('');
 const [myShips4,setMyShips4] = useState('');
+
+
 //submits de mis barcos***********************************//
 const [sendShips,setSendShips] = useState([]);
 const [sendShip1, setSendShip1] = useState([]);
 const [sendShip2, setSendShip2] = useState([]);
 const [sendShip3, setSendShip3] = useState([]);
 const [sendShip4, setSendShip4] = useState([]);
+
+
 //Barcos enemigos****************************//
 const [enemyShips, setEnemyShips] = useState([]);
+
+
 //ataque enemigo*****************************//
 const [attack, setAttack] = useState([]);
 const [squareA1, setSquareA1] = useState([]);
@@ -102,6 +108,8 @@ const [squareI6, setSquareI6] = useState([]);
 const [squareI7, setSquareI7] = useState([]);
 const [squareI8, setSquareI8] = useState([]);
 const [squareI9, setSquareI9] = useState([]);
+
+
 //acción de ataque******************//
 const [shotA1, setShotA1] = useState([]);
 const [shotA2, setShotA2] = useState([]);
@@ -184,15 +192,24 @@ const [shotI6, setShotI6] = useState([]);
 const [shotI7, setShotI7] = useState([]);
 const [shotI8, setShotI8] = useState([]);
 const [shotI9, setShotI9] = useState([]);
+const [attackedEnemies, setAttackedEnemies] = ([]);
+
+
+//GameOver**************************************** */
+const [gameOver, setGameOver] = useState([]);
+
 
 //posicionar barcos enemigos**************************//
 const placeEnemyShips = () => {
   setEnemyShips([ships,...enemyShips])
 }
+
+
 //mi ataque ******************************************//
 const atacarA1 = () => {
   setShotA1(enemyShips.includes("A1") ? "hit" : "miss")
   enemyAttack()
+
 }
 const atacarA2 = () => {
   setShotA2(enemyShips.includes("A2") ? "hit" : "miss")
@@ -517,9 +534,11 @@ const atacarI9 = () => {
 
 
 
-//ataque de enimgos**********************************//
+
+//ataque de enemigos**********************************//
 const enemyAttack = () => {
   setAttack([enemyAttacks, ...attack])
+  gameover()
   setSquareA1(attack.includes("A1") && sendShips == "A1" ? "hit" : attack.includes ("A1") && sendShip1 == "A1" ? "hit" : attack.includes("A1") && sendShip2 == "A1" ? "hit" : attack.includes("A1") && sendShip3 == "A1" ? "hit" : attack.includes("A1") && sendShip4 == "A1" ? "hit" : attack.includes("A1") ? "miss" : "" )
   setSquareA2(attack.includes("A2") && sendShips == "A2" ? "hit" : attack.includes ("A2") && sendShip1 == "A2" ? "hit" : attack.includes("A2") && sendShip2 == "A2" ? "hit" : attack.includes("A2") && sendShip3 == "A2" ? "hit" : attack.includes("A2") && sendShip4 == "A2" ? "hit" : attack.includes("A2") ? "miss" : "" )
   setSquareA3(attack.includes("A3") && sendShips == "A3" ? "hit" : attack.includes ("A3") && sendShip1 == "A3" ? "hit" : attack.includes("A3") && sendShip2 == "A3" ? "hit" : attack.includes("A3") && sendShip3 == "A3" ? "hit" : attack.includes("A3") && sendShip4 == "A3" ? "hit" : attack.includes("A3") ? "miss" : "" )
@@ -603,6 +622,9 @@ const enemyAttack = () => {
   setSquareI9(attack.includes("I9") && sendShips == "I9" ? "hit" : attack.includes ("I9") && sendShip1 == "I9" ? "hit" : attack.includes("I9") && sendShip2 == "I9" ? "hit" : attack.includes("I9") && sendShip3 == "I9" ? "hit" : attack.includes("I9") && sendShip4 == "I9" ? "hit" : attack.includes("I9") ? "miss" : "" )
 }
 
+
+
+
 //posicionar Mis barcos*************************************************************************************//
 const placeMyShips = (e) => {
 setMyShips(e.target.value)
@@ -647,12 +669,25 @@ let enemyAttacks = [];
   enemyAttacks += letter[Math.floor(Math.random() * letter.length)] + number[Math.floor(Math.random() * number.length)];
 
 
+// gameover situations******************************* */
+
+
+const gameover = () => {
+  setGameOver(attack.includes (sendShips) && attack.includes(sendShip1) && attack.includes(sendShip2) && attack.includes(sendShip3) && attack.includes(sendShip4) ? "YouLose" : "")
+
+}
+
+
 
 
 console.log(enemyShips)
-console.log(ships)
-console.log(enemyAttacks)
 console.log(attack)
+console.log(sendShips)
+console.log(sendShip1)
+console.log(sendShip2)
+console.log(sendShip3)
+console.log(sendShip4)
+console.log(gameOver)
 //en orden descendente://
 //inputs para colocar los barcos//
 //botón para colocar los barcos enemigos//
@@ -918,7 +953,9 @@ console.log(attack)
         <div className="col-1 blank"></div>
         <div className="col-1 blank"></div>
       </div>
-    </div>
+      <div className={"gameover" + (gameOver == "YouWin" ? "YouWin" : "")}>You win</div>
+      <div className={"gameover" + (gameOver == "YouLose" ? "YouLose" : "")}>You lose</div>
+    </div> 
   </div>);
 }
 

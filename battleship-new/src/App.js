@@ -192,7 +192,7 @@ const [shotI6, setShotI6] = useState([]);
 const [shotI7, setShotI7] = useState([]);
 const [shotI8, setShotI8] = useState([]);
 const [shotI9, setShotI9] = useState([]);
-const [attackedEnemies, setAttackedEnemies] = ([]);
+const [attackedEnemies, setAttackedEnemies] = useState([]);
 
 
 //GameOver**************************************** */
@@ -207,6 +207,7 @@ const placeEnemyShips = () => {
 
 //mi ataque ******************************************//
 const atacarA1 = () => {
+  setAttackedEnemies(shotA1 == ("hit") ? [...attackedEnemies, "A1"] : "")
   setShotA1(enemyShips.includes("A1") ? "hit" : "miss")
   enemyAttack()
 
@@ -670,10 +671,8 @@ let enemyAttacks = [];
 
 
 // gameover situations******************************* */
-
-
 const gameover = () => {
-  setGameOver(attack.includes (sendShips) && attack.includes(sendShip1) && attack.includes(sendShip2) && attack.includes(sendShip3) && attack.includes(sendShip4) ? "YouLose" : "")
+  setGameOver(attackedEnemies.length >= 4 ? "YouWin" : "")
 
 }
 
@@ -688,8 +687,10 @@ console.log(sendShip2)
 console.log(sendShip3)
 console.log(sendShip4)
 console.log(gameOver)
+console.log(attackedEnemies)
+console.log(ships)
 //en orden descendente://
-//inputs para colocar los barcos//
+//inputs para colocar los barcos del jugador con sus botones//
 //botón para colocar los barcos enemigos//
 //tablero del jugador//
 //tablero enemigo//
@@ -953,8 +954,8 @@ console.log(gameOver)
         <div className="col-1 blank"></div>
         <div className="col-1 blank"></div>
       </div>
-      <div className={"gameover" + (gameOver == "YouWin" ? "YouWin" : "")}>You win</div>
-      <div className={"gameover" + (gameOver == "YouLose" ? "YouLose" : "")}>You lose</div>
+      <div className={"gameover" + (gameOver == "YouWin" ? " YouWin" : "")}>Ganaste!</div>
+      <div className={"gameover" + (gameOver == "YouLose" ? " YouLose" : "")}>Perdiste!</div>
     </div> 
   </div>);
 }

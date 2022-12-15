@@ -192,12 +192,13 @@ const [shotI6, setShotI6] = useState([]);
 const [shotI7, setShotI7] = useState([]);
 const [shotI8, setShotI8] = useState([]);
 const [shotI9, setShotI9] = useState([]);
-const [attackedEnemies, setAttackedEnemies] = useState([]);
+
 
 
 //GameOver**************************************** */
 const [gameOver, setGameOver] = useState([]);
-
+const [attackedEnemies, setAttackedEnemies] = useState([]);
+const [attackedShips, setAttackedShips] = useState([]);
 
 //posicionar barcos enemigos**************************//
 const placeEnemyShips = () => {
@@ -207,328 +208,408 @@ const placeEnemyShips = () => {
 
 //mi ataque ******************************************//
 const atacarA1 = () => {
-  setAttackedEnemies(shotA1 == ("hit") ? [...attackedEnemies, "A1"] : "")
+  setAttackedEnemies(shotA1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA1(enemyShips.includes("A1") ? "hit" : "miss")
   enemyAttack()
 
 }
 const atacarA2 = () => {
+  setAttackedEnemies(shotA2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA2(enemyShips.includes("A2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA3 = () => {
+  setAttackedEnemies(shotA3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA3(enemyShips.includes("A3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA4 = () => {
+  setAttackedEnemies(shotA4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA4(enemyShips.includes("A4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA5 = () => {
+  setAttackedEnemies(shotA5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA5(enemyShips.includes("A5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA6 = () => {
+  setAttackedEnemies(shotA6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA6(enemyShips.includes("A6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA7 = () => {
+  setAttackedEnemies(shotA7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA7(enemyShips.includes("A7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA8 = () => {
+  setAttackedEnemies(shotA8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA8(enemyShips.includes("A8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarA9 = () => {
+  setAttackedEnemies(shotA9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotA9(enemyShips.includes("A9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB1 = () => {
+  setAttackedEnemies(shotB1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB1(enemyShips.includes("B1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB2 = () => {
+  setAttackedEnemies(shotB2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB2(enemyShips.includes("B2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB3 = () => {
+  setAttackedEnemies(shotB3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB3(enemyShips.includes("B3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB4 = () => {
+  setAttackedEnemies(shotB4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB4(enemyShips.includes("B4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB5 = () => {
+  setAttackedEnemies(shotB5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB5(enemyShips.includes("B5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB6 = () => {
+  setAttackedEnemies(shotB6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB6(enemyShips.includes("B6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB7 = () => {
+  setAttackedEnemies(shotB7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB7(enemyShips.includes("B7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB8 = () => {
+  setAttackedEnemies(shotB8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB8(enemyShips.includes("B8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarB9 = () => {
+  setAttackedEnemies(shotB9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotB9(enemyShips.includes("B9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC1 = () => {
+  setAttackedEnemies(shotC1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC1(enemyShips.includes("C1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC2 = () => {
+  setAttackedEnemies(shotC2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC2(enemyShips.includes("C2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC3 = () => {
+  setAttackedEnemies(shotC3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC3(enemyShips.includes("C3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC4 = () => {
+  setAttackedEnemies(shotC4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC4(enemyShips.includes("C4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC5 = () => {
+  setAttackedEnemies(shotC5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC5(enemyShips.includes("C5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC6 = () => {
+  setAttackedEnemies(shotC6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC6(enemyShips.includes("C6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC7 = () => {
+  setAttackedEnemies(shotC7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC7(enemyShips.includes("C7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC8 = () => {
+  setAttackedEnemies(shotC8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC8(enemyShips.includes("C8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarC9 = () => {
+  setAttackedEnemies(shotC9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotC9(enemyShips.includes("C9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD1 = () => {
+  setAttackedEnemies(shotD1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD1(enemyShips.includes("D1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD2 = () => {
+  setAttackedEnemies(shotD2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD2(enemyShips.includes("D2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD3 = () => {
+  setAttackedEnemies(shotD3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD3(enemyShips.includes("D3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD4 = () => {
+  setAttackedEnemies(shotD4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD4(enemyShips.includes("D4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD5 = () => {
+  setAttackedEnemies(shotD5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD5(enemyShips.includes("D5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD6 = () => {
+  setAttackedEnemies(shotD6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD6(enemyShips.includes("D6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD7 = () => {
+  setAttackedEnemies(shotD7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD7(enemyShips.includes("D7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD8 = () => {
+  setAttackedEnemies(shotD8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD8(enemyShips.includes("D8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarD9 = () => {
+  setAttackedEnemies(shotD9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotD9(enemyShips.includes("D9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE1 = () => {
+  setAttackedEnemies(shotE1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE1(enemyShips.includes("E1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE2 = () => {
+  setAttackedEnemies(shotE2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE2(enemyShips.includes("E2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE3 = () => {
+  setAttackedEnemies(shotE3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE3(enemyShips.includes("E3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE4 = () => {
+  setAttackedEnemies(shotE4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE4(enemyShips.includes("E4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE5 = () => {
+  setAttackedEnemies(shotE5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE5(enemyShips.includes("E5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE6 = () => {
+  setAttackedEnemies(shotE6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE6(enemyShips.includes("E6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE7 = () => {
+  setAttackedEnemies(shotE7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE7(enemyShips.includes("E7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE8 = () => {
+  setAttackedEnemies(shotE8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE8(enemyShips.includes("E8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarE9 = () => {
+  setAttackedEnemies(shotE9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotE9(enemyShips.includes("E9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF1 = () => {
+  setAttackedEnemies(shotF1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF1(enemyShips.includes("F1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF2 = () => {
+  setAttackedEnemies(shotF2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF2(enemyShips.includes("F2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF3 = () => {
+  setAttackedEnemies(shotF3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF3(enemyShips.includes("F3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF4 = () => {
+  setAttackedEnemies(shotF4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF4(enemyShips.includes("F4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF5 = () => {
+  setAttackedEnemies(shotF5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF5(enemyShips.includes("F5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF6 = () => {
+  setAttackedEnemies(shotF6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF6(enemyShips.includes("F6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF7 = () => {
+  setAttackedEnemies(shotF7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF7(enemyShips.includes("F7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF8 = () => {
+  setAttackedEnemies(shotF8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF8(enemyShips.includes("F8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarF9 = () => {
+  setAttackedEnemies(shotF9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotF9(enemyShips.includes("F9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG1 = () => {
+  setAttackedEnemies(shotG1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG1(enemyShips.includes("G1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG2 = () => {
+  setAttackedEnemies(shotG2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG2(enemyShips.includes("G2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG3 = () => {
+  setAttackedEnemies(shotG3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG3(enemyShips.includes("G3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG4 = () => {
+  setAttackedEnemies(shotG4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG4(enemyShips.includes("G4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG5 = () => {
+  setAttackedEnemies(shotG5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG5(enemyShips.includes("G5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG6 = () => {
+  setAttackedEnemies(shotG6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG6(enemyShips.includes("G6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG7 = () => {
+  setAttackedEnemies(shotG7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG7(enemyShips.includes("G7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG8 = () => {
+  setAttackedEnemies(shotG8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG8(enemyShips.includes("G8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarG9 = () => {
+  setAttackedEnemies(shotG9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotG9(enemyShips.includes("G9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH1 = () => {
+  setAttackedEnemies(shotH1 == ("hit") ? [...attackedEnemies, "A1"] :attackedEnemies)
   setShotH1(enemyShips.includes("H1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH2 = () => {
+  setAttackedEnemies(shotH2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH2(enemyShips.includes("H2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH3 = () => {
+  setAttackedEnemies(shotH3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH3(enemyShips.includes("H3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH4 = () => {
+  setAttackedEnemies(shotH4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH4(enemyShips.includes("H4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH5 = () => {
+  setAttackedEnemies(shotH5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH5(enemyShips.includes("H5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH6 = () => {
+  setAttackedEnemies(shotH6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH6(enemyShips.includes("H6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH7 = () => {
+  setAttackedEnemies(shotH7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH7(enemyShips.includes("H7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH8 = () => {
+  setAttackedEnemies(shotH8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH8(enemyShips.includes("H8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarH9 = () => {
+  setAttackedEnemies(shotH9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotH9(enemyShips.includes("H9") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI1 = () => {
+  setAttackedEnemies(shotI1 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI1(enemyShips.includes("I1") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI2 = () => {
+  setAttackedEnemies(shotI2 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI2(enemyShips.includes("I2") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI3 = () => {
+  setAttackedEnemies(shotI3 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI3(enemyShips.includes("I3") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI4 = () => {
+  setAttackedEnemies(shotI4 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI4(enemyShips.includes("I4") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI5 = () => {
+  setAttackedEnemies(shotI5 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI5(enemyShips.includes("I5") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI6 = () => {
+  setAttackedEnemies(shotI6 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI6(enemyShips.includes("I6") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI7 = () => {
+  setAttackedEnemies(shotI7 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI7(enemyShips.includes("I7") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI8 = () => {
+  setAttackedEnemies(shotI8 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI8(enemyShips.includes("I8") ? "hit" : "miss")
   enemyAttack()
 }
 const atacarI9 = () => {
+  setAttackedEnemies(shotI9 == ("hit") ? [...attackedEnemies, "A1"] : attackedEnemies)
   setShotI9(enemyShips.includes("I9") ? "hit" : "miss")
   enemyAttack()
 }
@@ -621,9 +702,418 @@ const enemyAttack = () => {
   setSquareI7(attack.includes("I7") && sendShips == "I7" ? "hit" : attack.includes ("I7") && sendShip1 == "I7" ? "hit" : attack.includes("I7") && sendShip2 == "I7" ? "hit" : attack.includes("I7") && sendShip3 == "I7" ? "hit" : attack.includes("I7") && sendShip4 == "I7" ? "hit" : attack.includes("I7") ? "miss" : "" )
   setSquareI8(attack.includes("I8") && sendShips == "I8" ? "hit" : attack.includes ("I8") && sendShip1 == "I8" ? "hit" : attack.includes("I8") && sendShip2 == "I8" ? "hit" : attack.includes("I8") && sendShip3 == "I8" ? "hit" : attack.includes("I8") && sendShip4 == "I8" ? "hit" : attack.includes("I8") ? "miss" : "" )
   setSquareI9(attack.includes("I9") && sendShips == "I9" ? "hit" : attack.includes ("I9") && sendShip1 == "I9" ? "hit" : attack.includes("I9") && sendShip2 == "I9" ? "hit" : attack.includes("I9") && sendShip3 == "I9" ? "hit" : attack.includes("I9") && sendShip4 == "I9" ? "hit" : attack.includes("I9") ? "miss" : "" )
+  saveAttacked()
 }
 
+////guardar barcos del jugador hundidos****************************//
 
+const saveAttacked = () => {
+  setMyShips(attack.includes("A1") && sendShips == "A1" ? "hit" :
+  attack.includes("A2") && sendShips == "A2" ? "hit" : 
+  attack.includes("A3") && sendShips == "A3" ? "hit" : 
+  attack.includes("A4") && sendShips == "A4" ? "hit" : 
+  attack.includes("A5") && sendShips == "A5" ? "hit" : 
+  attack.includes("A6") && sendShips == "A6" ? "hit" : 
+  attack.includes("A7") && sendShips == "A7" ? "hit" : 
+  attack.includes("A8") && sendShips == "A8" ? "hit" : 
+  attack.includes("A9") && sendShips == "A9" ? "hit" : 
+  attack.includes("B1") && sendShips == "B1" ? "hit" : 
+  attack.includes("B2") && sendShips == "B2" ? "hit" : 
+  attack.includes("B3") && sendShips == "B3" ? "hit" : 
+  attack.includes("B4") && sendShips == "B4" ? "hit" : 
+  attack.includes("B5") && sendShips == "B5" ? "hit" : 
+  attack.includes("B6") && sendShips == "B6" ? "hit" : 
+  attack.includes("B7") && sendShips == "B7" ? "hit" : 
+  attack.includes("B8") && sendShips == "B8" ? "hit" : 
+  attack.includes("B9") && sendShips == "B9" ? "hit" : 
+  attack.includes("C1") && sendShips == "C1" ? "hit" : 
+  attack.includes("C2") && sendShips == "C2" ? "hit" : 
+  attack.includes("C3") && sendShips == "C3" ? "hit" : 
+  attack.includes("C4") && sendShips == "C4" ? "hit" : 
+  attack.includes("C5") && sendShips == "C5" ? "hit" : 
+  attack.includes("C6") && sendShips == "C6" ? "hit" : 
+  attack.includes("C7") && sendShips == "C7" ? "hit" : 
+  attack.includes("C8") && sendShips == "C8" ? "hit" : 
+  attack.includes("C9") && sendShips == "C9" ? "hit" : 
+  attack.includes("D1") && sendShips == "D1" ? "hit" : 
+  attack.includes("D2") && sendShips == "D2" ? "hit" : 
+  attack.includes("D3") && sendShips == "D3" ? "hit" : 
+  attack.includes("D4") && sendShips == "D4" ? "hit" : 
+  attack.includes("D5") && sendShips == "D5" ? "hit" : 
+  attack.includes("D6") && sendShips == "D6" ? "hit" : 
+  attack.includes("D7") && sendShips == "D7" ? "hit" : 
+  attack.includes("D8") && sendShips == "D8" ? "hit" : 
+  attack.includes("D9") && sendShips == "D9" ? "hit" : 
+  attack.includes("E1") && sendShips == "E1" ? "hit" : 
+  attack.includes("E2") && sendShips == "E2" ? "hit" : 
+  attack.includes("E3") && sendShips == "E3" ? "hit" : 
+  attack.includes("E4") && sendShips == "E4" ? "hit" : 
+  attack.includes("E5") && sendShips == "E5" ? "hit" : 
+  attack.includes("E6") && sendShips == "E6" ? "hit" : 
+  attack.includes("E7") && sendShips == "E7" ? "hit" : 
+  attack.includes("E8") && sendShips == "E8" ? "hit" : 
+  attack.includes("E9") && sendShips == "E9" ? "hit" : 
+  attack.includes("F1") && sendShips == "F1" ? "hit" : 
+  attack.includes("F2") && sendShips == "F2" ? "hit" : 
+  attack.includes("F3") && sendShips == "F3" ? "hit" : 
+  attack.includes("F4") && sendShips == "F4" ? "hit" : 
+  attack.includes("F5") && sendShips == "F5" ? "hit" : 
+  attack.includes("F6") && sendShips == "F6" ? "hit" : 
+  attack.includes("F7") && sendShips == "F7" ? "hit" : 
+  attack.includes("F8") && sendShips == "F8" ? "hit" : 
+  attack.includes("F9") && sendShips == "F9" ? "hit" : 
+  attack.includes("G1") && sendShips == "G1" ? "hit" : 
+  attack.includes("G2") && sendShips == "G2" ? "hit" : 
+  attack.includes("G3") && sendShips == "G3" ? "hit" : 
+  attack.includes("G4") && sendShips == "G4" ? "hit" : 
+  attack.includes("G5") && sendShips == "G5" ? "hit" : 
+  attack.includes("G6") && sendShips == "G6" ? "hit" : 
+  attack.includes("G7") && sendShips == "G7" ? "hit" : 
+  attack.includes("G8") && sendShips == "G8" ? "hit" : 
+  attack.includes("G9") && sendShips == "G9" ? "hit" : 
+  attack.includes("H1") && sendShips == "H1" ? "hit" : 
+  attack.includes("H2") && sendShips == "H2" ? "hit" : 
+  attack.includes("H3") && sendShips == "H3" ? "hit" : 
+  attack.includes("H4") && sendShips == "H4" ? "hit" : 
+  attack.includes("H5") && sendShips == "H5" ? "hit" : 
+  attack.includes("H6") && sendShips == "H6" ? "hit" : 
+  attack.includes("H7") && sendShips == "H7" ? "hit" : 
+  attack.includes("H8") && sendShips == "H8" ? "hit" : 
+  attack.includes("H9") && sendShips == "H9" ? "hit" : 
+  attack.includes("I1") && sendShips == "I1" ? "hit" : 
+  attack.includes("I2") && sendShips == "I2" ? "hit" : 
+  attack.includes("I3") && sendShips == "I3" ? "hit" : 
+  attack.includes("I4") && sendShips == "I4" ? "hit" : 
+  attack.includes("I5") && sendShips == "I5" ? "hit" : 
+  attack.includes("I6") && sendShips == "I6" ? "hit" : 
+  attack.includes("I7") && sendShips == "I7" ? "hit" : 
+  attack.includes("I8") && sendShips == "I8" ? "hit" : 
+  attack.includes("I9") && sendShips == "I9" ? "hit" : myShips)
+  setMyShips1(attack.includes("A1") && sendShip1 == "A1" ? "hit" :
+  attack.includes("A2") && sendShip1 == "A2" ? "hit" :
+  attack.includes("A3") && sendShip1 == "A3" ? "hit" : 
+  attack.includes("A4") && sendShip1 == "A4" ? "hit" : 
+  attack.includes("A5") && sendShip1 == "A5" ? "hit" : 
+  attack.includes("A6") && sendShip1 == "A6" ? "hit" : 
+  attack.includes("A7") && sendShip1 == "A7" ? "hit" : 
+  attack.includes("A8") && sendShip1 == "A8" ? "hit" : 
+  attack.includes("A9") && sendShip1 == "A9" ? "hit" : 
+  attack.includes("B1") && sendShip1 == "B1" ? "hit" : 
+  attack.includes("B2") && sendShip1 == "B2" ? "hit" : 
+  attack.includes("B3") && sendShip1 == "B3" ? "hit" : 
+  attack.includes("B4") && sendShip1 == "B4" ? "hit" : 
+  attack.includes("B5") && sendShip1 == "B5" ? "hit" : 
+  attack.includes("B6") && sendShip1 == "B6" ? "hit" : 
+  attack.includes("B7") && sendShip1 == "B7" ? "hit" : 
+  attack.includes("B8") && sendShip1 == "B8" ? "hit" : 
+  attack.includes("B9") && sendShip1 == "B9" ? "hit" : 
+  attack.includes("C1") && sendShip1 == "C1" ? "hit" : 
+  attack.includes("C2") && sendShip1 == "C2" ? "hit" : 
+  attack.includes("C3") && sendShip1 == "C3" ? "hit" : 
+  attack.includes("C4") && sendShip1 == "C4" ? "hit" : 
+  attack.includes("C5") && sendShip1 == "C5" ? "hit" : 
+  attack.includes("C6") && sendShip1 == "C6" ? "hit" : 
+  attack.includes("C7") && sendShip1 == "C7" ? "hit" : 
+  attack.includes("C8") && sendShip1 == "C8" ? "hit" : 
+  attack.includes("C9") && sendShip1 == "C9" ? "hit" : 
+  attack.includes("D1") && sendShip1 == "D1" ? "hit" : 
+  attack.includes("D2") && sendShip1 == "D2" ? "hit" : 
+  attack.includes("D3") && sendShip1 == "D3" ? "hit" : 
+  attack.includes("D4") && sendShip1 == "D4" ? "hit" : 
+  attack.includes("D5") && sendShip1 == "D5" ? "hit" : 
+  attack.includes("D6") && sendShip1 == "D6" ? "hit" : 
+  attack.includes("D7") && sendShip1 == "D7" ? "hit" : 
+  attack.includes("D8") && sendShip1 == "D8" ? "hit" : 
+  attack.includes("D9") && sendShip1 == "D9" ? "hit" : 
+  attack.includes("E1") && sendShip1 == "E1" ? "hit" : 
+  attack.includes("E2") && sendShip1 == "E2" ? "hit" : 
+  attack.includes("E3") && sendShip1 == "E3" ? "hit" : 
+  attack.includes("E4") && sendShip1 == "E4" ? "hit" : 
+  attack.includes("E5") && sendShip1 == "E5" ? "hit" : 
+  attack.includes("E6") && sendShip1 == "E6" ? "hit" : 
+  attack.includes("E7") && sendShip1 == "E7" ? "hit" : 
+  attack.includes("E8") && sendShip1 == "E8" ? "hit" : 
+  attack.includes("E9") && sendShip1 == "E9" ? "hit" : 
+  attack.includes("F1") && sendShip1 == "F1" ? "hit" : 
+  attack.includes("F2") && sendShip1 == "F2" ? "hit" : 
+  attack.includes("F3") && sendShip1 == "F3" ? "hit" : 
+  attack.includes("F4") && sendShip1 == "F4" ? "hit" : 
+  attack.includes("F5") && sendShip1 == "F5" ? "hit" : 
+  attack.includes("F6") && sendShip1 == "F6" ? "hit" : 
+  attack.includes("F7") && sendShip1 == "F7" ? "hit" : 
+  attack.includes("F8") && sendShip1 == "F8" ? "hit" : 
+  attack.includes("F9") && sendShip1 == "F9" ? "hit" : 
+  attack.includes("G1") && sendShip1 == "G1" ? "hit" : 
+  attack.includes("G2") && sendShip1 == "G2" ? "hit" : 
+  attack.includes("G3") && sendShip1 == "G3" ? "hit" : 
+  attack.includes("G4") && sendShip1 == "G4" ? "hit" : 
+  attack.includes("G5") && sendShip1 == "G5" ? "hit" : 
+  attack.includes("G6") && sendShip1 == "G6" ? "hit" : 
+  attack.includes("G7") && sendShip1 == "G7" ? "hit" : 
+  attack.includes("G8") && sendShip1 == "G8" ? "hit" : 
+  attack.includes("G9") && sendShip1 == "G9" ? "hit" : 
+  attack.includes("H1") && sendShip1 == "H1" ? "hit" : 
+  attack.includes("H2") && sendShip1 == "H2" ? "hit" : 
+  attack.includes("H3") && sendShip1 == "H3" ? "hit" : 
+  attack.includes("H4") && sendShip1 == "H4" ? "hit" : 
+  attack.includes("H5") && sendShip1 == "H5" ? "hit" : 
+  attack.includes("H6") && sendShip1 == "H6" ? "hit" : 
+  attack.includes("H7") && sendShip1 == "H7" ? "hit" : 
+  attack.includes("H8") && sendShip1 == "H8" ? "hit" : 
+  attack.includes("H9") && sendShip1 == "H9" ? "hit" : 
+  attack.includes("I1") && sendShip1 == "I1" ? "hit" : 
+  attack.includes("I2") && sendShip1 == "I2" ? "hit" : 
+  attack.includes("I3") && sendShip1 == "I3" ? "hit" : 
+  attack.includes("I4") && sendShip1 == "I4" ? "hit" : 
+  attack.includes("I5") && sendShip1 == "I5" ? "hit" : 
+  attack.includes("I6") && sendShip1 == "I6" ? "hit" : 
+  attack.includes("I7") && sendShip1 == "I7" ? "hit" : 
+  attack.includes("I8") && sendShip1 == "I8" ? "hit" : 
+  attack.includes("I9") && sendShip1 == "I9" ? "hit" : myShips1)
+  setMyShips2(attack.includes("A1") && sendShip2 == "A1" ? "hit"  :
+  attack.includes("A2") && sendShip2 == "A2" ? "hit" :
+  attack.includes("A3") && sendShip2 == "A3" ? "hit" :
+  attack.includes("A4") && sendShip2 == "A4" ? "hit" :
+  attack.includes("A5") && sendShip2 == "A5" ? "hit" :
+  attack.includes("A6") && sendShip2 == "A6" ? "hit" :
+  attack.includes("A7") && sendShip2 == "A7" ? "hit" :
+  attack.includes("A8") && sendShip2 == "A8" ? "hit" :
+  attack.includes("A9") && sendShip2 == "A9" ? "hit" :
+  attack.includes("B1") && sendShip2 == "B1" ? "hit" :
+  attack.includes("B2") && sendShip2 == "B2" ? "hit" :
+  attack.includes("B3") && sendShip2 == "B3" ? "hit" :
+  attack.includes("B4") && sendShip2 == "B4" ? "hit" :
+  attack.includes("B5") && sendShip2 == "B5" ? "hit" :
+  attack.includes("B6") && sendShip2 == "B6" ? "hit" :
+  attack.includes("B7") && sendShip2 == "B7" ? "hit" :
+  attack.includes("B8") && sendShip2 == "B8" ? "hit" :
+  attack.includes("B9") && sendShip2 == "B9" ? "hit" :
+  attack.includes("C1") && sendShip2 == "C1" ? "hit" :
+  attack.includes("C2") && sendShip2 == "C2" ? "hit" :
+  attack.includes("C3") && sendShip2 == "C3" ? "hit" :
+  attack.includes("C4") && sendShip2 == "C4" ? "hit" :
+  attack.includes("C5") && sendShip2 == "C5" ? "hit" :
+  attack.includes("C6") && sendShip2 == "C6" ? "hit" :
+  attack.includes("C7") && sendShip2 == "C7" ? "hit" :
+  attack.includes("C8") && sendShip2 == "C8" ? "hit" :
+  attack.includes("C9") && sendShip2 == "C9" ? "hit" :
+  attack.includes("D1") && sendShip2 == "D1" ? "hit" :
+  attack.includes("D2") && sendShip2 == "D2" ? "hit" :
+  attack.includes("D3") && sendShip2 == "D3" ? "hit" :
+  attack.includes("D4") && sendShip2 == "D4" ? "hit" :
+  attack.includes("D5") && sendShip2 == "D5" ? "hit" :
+  attack.includes("D6") && sendShip2 == "D6" ? "hit" :
+  attack.includes("D7") && sendShip2 == "D7" ? "hit" :
+  attack.includes("D8") && sendShip2 == "D8" ? "hit" :
+  attack.includes("D9") && sendShip2 == "D9" ? "hit" :
+  attack.includes("E1") && sendShip2 == "E1" ? "hit" :
+  attack.includes("E2") && sendShip2 == "E2" ? "hit" :
+  attack.includes("E3") && sendShip2 == "E3" ? "hit" :
+  attack.includes("E4") && sendShip2 == "E4" ? "hit" :
+  attack.includes("E5") && sendShip2 == "E5" ? "hit" :
+  attack.includes("E6") && sendShip2 == "E6" ? "hit" :
+  attack.includes("E7") && sendShip2 == "E7" ? "hit" :
+  attack.includes("E8") && sendShip2 == "E8" ? "hit" :
+  attack.includes("E9") && sendShip2 == "E9" ? "hit" :
+  attack.includes("F1") && sendShip2 == "F1" ? "hit" :
+  attack.includes("F2") && sendShip2 == "F2" ? "hit" :
+  attack.includes("F3") && sendShip2 == "F3" ? "hit" :
+  attack.includes("F4") && sendShip2 == "F4" ? "hit" :
+  attack.includes("F5") && sendShip2 == "F5" ? "hit" :
+  attack.includes("F6") && sendShip2 == "F6" ? "hit" :
+  attack.includes("F7") && sendShip2 == "F7" ? "hit" :
+  attack.includes("F8") && sendShip2 == "F8" ? "hit" :
+  attack.includes("F9") && sendShip2 == "F9" ? "hit" :
+  attack.includes("G1") && sendShip2 == "G1" ? "hit" :
+  attack.includes("G2") && sendShip2 == "G2" ? "hit" :
+  attack.includes("G3") && sendShip2 == "G3" ? "hit" :
+  attack.includes("G4") && sendShip2 == "G4" ? "hit" :
+  attack.includes("G5") && sendShip2 == "G5" ? "hit" :
+  attack.includes("G6") && sendShip2 == "G6" ? "hit" :
+  attack.includes("G7") && sendShip2 == "G7" ? "hit" :
+  attack.includes("G8") && sendShip2 == "G8" ? "hit" :
+  attack.includes("G9") && sendShip2 == "G9" ? "hit" :
+  attack.includes("H1") && sendShip2 == "H1" ? "hit" :
+  attack.includes("H2") && sendShip2 == "H2" ? "hit" :
+  attack.includes("H3") && sendShip2 == "H3" ? "hit" :
+  attack.includes("H4") && sendShip2 == "H4" ? "hit" :
+  attack.includes("H5") && sendShip2 == "H5" ? "hit" :
+  attack.includes("H6") && sendShip2 == "H6" ? "hit" :
+  attack.includes("H7") && sendShip2 == "H7" ? "hit" :
+  attack.includes("H8") && sendShip2 == "H8" ? "hit" :
+  attack.includes("H9") && sendShip2 == "H9" ? "hit" :
+  attack.includes("I1") && sendShip2 == "I1" ? "hit" :
+  attack.includes("I2") && sendShip2 == "I2" ? "hit" :
+  attack.includes("I3") && sendShip2 == "I3" ? "hit" :
+  attack.includes("I4") && sendShip2 == "I4" ? "hit" :
+  attack.includes("I5") && sendShip2 == "I5" ? "hit" :
+  attack.includes("I6") && sendShip2 == "I6" ? "hit" :
+  attack.includes("I7") && sendShip2 == "I7" ? "hit" :
+  attack.includes("I8") && sendShip2 == "I8" ? "hit" :
+  attack.includes("I9") && sendShip2 == "I9" ? "hit" : myShips2)
+  setMyShips3(attack.includes("A1") && sendShip3 == "A1" ? "hit"  :
+  attack.includes("A2") && sendShip3 == "A2" ? "hit" :
+  attack.includes("A3") && sendShip3 == "A3" ? "hit" :
+  attack.includes("A4") && sendShip3 == "A4" ? "hit" :
+  attack.includes("A5") && sendShip3 == "A5" ? "hit" :
+  attack.includes("A6") && sendShip3 == "A6" ? "hit" :
+  attack.includes("A7") && sendShip3 == "A7" ? "hit" :
+  attack.includes("A8") && sendShip3 == "A8" ? "hit" :
+  attack.includes("A9") && sendShip3 == "A9" ? "hit" :
+  attack.includes("B1") && sendShip3 == "B1" ? "hit" :
+  attack.includes("B2") && sendShip3 == "B2" ? "hit" :
+  attack.includes("B3") && sendShip3 == "B3" ? "hit" :
+  attack.includes("B4") && sendShip3 == "B4" ? "hit" :
+  attack.includes("B5") && sendShip3 == "B5" ? "hit" :
+  attack.includes("B6") && sendShip3 == "B6" ? "hit" :
+  attack.includes("B7") && sendShip3 == "B7" ? "hit" :
+  attack.includes("B8") && sendShip3 == "B8" ? "hit" :
+  attack.includes("B9") && sendShip3 == "B9" ? "hit" :
+  attack.includes("C1") && sendShip3 == "C1" ? "hit" :
+  attack.includes("C2") && sendShip3 == "C2" ? "hit" :
+  attack.includes("C3") && sendShip3 == "C3" ? "hit" :
+  attack.includes("C4") && sendShip3 == "C4" ? "hit" :
+  attack.includes("C5") && sendShip3 == "C5" ? "hit" :
+  attack.includes("C6") && sendShip3 == "C6" ? "hit" :
+  attack.includes("C7") && sendShip3 == "C7" ? "hit" :
+  attack.includes("C8") && sendShip3 == "C8" ? "hit" :
+  attack.includes("C9") && sendShip3 == "C9" ? "hit" :
+  attack.includes("D1") && sendShip3 == "D1" ? "hit" :
+  attack.includes("D2") && sendShip3 == "D2" ? "hit" :
+  attack.includes("D3") && sendShip3 == "D3" ? "hit" :
+  attack.includes("D4") && sendShip3 == "D4" ? "hit" :
+  attack.includes("D5") && sendShip3 == "D5" ? "hit" :
+  attack.includes("D6") && sendShip3 == "D6" ? "hit" :
+  attack.includes("D7") && sendShip3 == "D7" ? "hit" :
+  attack.includes("D8") && sendShip3 == "D8" ? "hit" :
+  attack.includes("D9") && sendShip3 == "D9" ? "hit" :
+  attack.includes("E1") && sendShip3 == "E1" ? "hit" :
+  attack.includes("E2") && sendShip3 == "E2" ? "hit" :
+  attack.includes("E3") && sendShip3 == "E3" ? "hit" :
+  attack.includes("E4") && sendShip3 == "E4" ? "hit" :
+  attack.includes("E5") && sendShip3 == "E5" ? "hit" :
+  attack.includes("E6") && sendShip3 == "E6" ? "hit" :
+  attack.includes("E7") && sendShip3 == "E7" ? "hit" :
+  attack.includes("E8") && sendShip3 == "E8" ? "hit" :
+  attack.includes("E9") && sendShip3 == "E9" ? "hit" :
+  attack.includes("F1") && sendShip3 == "F1" ? "hit" :
+  attack.includes("F2") && sendShip3 == "F2" ? "hit" :
+  attack.includes("F3") && sendShip3 == "F3" ? "hit" :
+  attack.includes("F4") && sendShip3 == "F4" ? "hit" :
+  attack.includes("F5") && sendShip3 == "F5" ? "hit" :
+  attack.includes("F6") && sendShip3 == "F6" ? "hit" :
+  attack.includes("F7") && sendShip3 == "F7" ? "hit" :
+  attack.includes("F8") && sendShip3 == "F8" ? "hit" :
+  attack.includes("F9") && sendShip3 == "F9" ? "hit" :
+  attack.includes("G1") && sendShip3 == "G1" ? "hit" :
+  attack.includes("G2") && sendShip3 == "G2" ? "hit" :
+  attack.includes("G3") && sendShip3 == "G3" ? "hit" :
+  attack.includes("G4") && sendShip3 == "G4" ? "hit" :
+  attack.includes("G5") && sendShip3 == "G5" ? "hit" :
+  attack.includes("G6") && sendShip3 == "G6" ? "hit" :
+  attack.includes("G7") && sendShip3 == "G7" ? "hit" :
+  attack.includes("G8") && sendShip3 == "G8" ? "hit" :
+  attack.includes("G9") && sendShip3 == "G9" ? "hit" :
+  attack.includes("H1") && sendShip3 == "H1" ? "hit" :
+  attack.includes("H2") && sendShip3 == "H2" ? "hit" :
+  attack.includes("H3") && sendShip3 == "H3" ? "hit" :
+  attack.includes("H4") && sendShip3 == "H4" ? "hit" :
+  attack.includes("H5") && sendShip3 == "H5" ? "hit" :
+  attack.includes("H6") && sendShip3 == "H6" ? "hit" :
+  attack.includes("H7") && sendShip3 == "H7" ? "hit" :
+  attack.includes("H8") && sendShip3 == "H8" ? "hit" :
+  attack.includes("H9") && sendShip3 == "H9" ? "hit" :
+  attack.includes("I1") && sendShip3 == "I1" ? "hit" :
+  attack.includes("I2") && sendShip3 == "I2" ? "hit" :
+  attack.includes("I3") && sendShip3 == "I3" ? "hit" :
+  attack.includes("I4") && sendShip3 == "I4" ? "hit" :
+  attack.includes("I5") && sendShip3 == "I5" ? "hit" :
+  attack.includes("I6") && sendShip3 == "I6" ? "hit" :
+  attack.includes("I7") && sendShip3 == "I7" ? "hit" :
+  attack.includes("I8") && sendShip3 == "I8" ? "hit" :
+  attack.includes("I9") && sendShip3 == "I9" ? "hit" : myShips3)
+  setMyShips4(attack.includes("A1") && sendShip4 == "A1" ? "hit" :
+  attack.includes("A2") && sendShip4 == "A2" ? "hit" :
+  attack.includes("A3") && sendShip4 == "A3" ? "hit" :
+  attack.includes("A4") && sendShip4 == "A4" ? "hit" :
+  attack.includes("A5") && sendShip4 == "A5" ? "hit" : 
+  attack.includes("A6") && sendShip4 == "A6" ? "hit" :
+  attack.includes("A7") && sendShip4 == "A7" ? "hit" :
+  attack.includes("A8") && sendShip4 == "A8" ? "hit" :
+  attack.includes("A9") && sendShip4 == "A9" ? "hit" :
+  attack.includes("B1") && sendShip4 == "B1" ? "hit" :
+  attack.includes("B2") && sendShip4 == "B2" ? "hit" :
+  attack.includes("B3") && sendShip4 == "B3" ? "hit" :
+  attack.includes("B4") && sendShip4 == "B4" ? "hit" :
+  attack.includes("B5") && sendShip4 == "B5" ? "hit" :
+  attack.includes("B6") && sendShip4 == "B6" ? "hit" :
+  attack.includes("B7") && sendShip4 == "B7" ? "hit" :
+  attack.includes("B8") && sendShip4 == "B8" ? "hit" :
+  attack.includes("B9") && sendShip4 == "B9" ? "hit" :
+  attack.includes("C1") && sendShip4 == "C1" ? "hit" :
+  attack.includes("C2") && sendShip4 == "C2" ? "hit" :
+  attack.includes("C3") && sendShip4 == "C3" ? "hit" :
+  attack.includes("C4") && sendShip4 == "C4" ? "hit" :
+  attack.includes("C5") && sendShip4 == "C5" ? "hit" :
+  attack.includes("C6") && sendShip4 == "C6" ? "hit" :
+  attack.includes("C7") && sendShip4 == "C7" ? "hit" :
+  attack.includes("C8") && sendShip4 == "C8" ? "hit" :
+  attack.includes("C9") && sendShip4 == "C9" ? "hit" :
+  attack.includes("D1") && sendShip4 == "D1" ? "hit" :
+  attack.includes("D2") && sendShip4 == "D2" ? "hit" :
+  attack.includes("D3") && sendShip4 == "D3" ? "hit" :
+  attack.includes("D4") && sendShip4 == "D4" ? "hit" :
+  attack.includes("D5") && sendShip4 == "D5" ? "hit" :
+  attack.includes("D6") && sendShip4 == "D6" ? "hit" :
+  attack.includes("D7") && sendShip4 == "D7" ? "hit" :
+  attack.includes("D8") && sendShip4 == "D8" ? "hit" :
+  attack.includes("D9") && sendShip4 == "D9" ? "hit" :
+  attack.includes("E1") && sendShip4 == "E1" ? "hit" :
+  attack.includes("E2") && sendShip4 == "E2" ? "hit" :
+  attack.includes("E3") && sendShip4 == "E3" ? "hit" :
+  attack.includes("E4") && sendShip4 == "E4" ? "hit" :
+  attack.includes("E5") && sendShip4 == "E5" ? "hit" :
+  attack.includes("E6") && sendShip4 == "E6" ? "hit" :
+  attack.includes("E7") && sendShip4 == "E7" ? "hit" :
+  attack.includes("E8") && sendShip4 == "E8" ? "hit" :
+  attack.includes("E9") && sendShip4 == "E9" ? "hit" :
+  attack.includes("F1") && sendShip4 == "F1" ? "hit" :
+  attack.includes("F2") && sendShip4 == "F2" ? "hit" :
+  attack.includes("F3") && sendShip4 == "F3" ? "hit" :
+  attack.includes("F4") && sendShip4 == "F4" ? "hit" :
+  attack.includes("F5") && sendShip4 == "F5" ? "hit" :
+  attack.includes("F6") && sendShip4 == "F6" ? "hit" :
+  attack.includes("F7") && sendShip4 == "F7" ? "hit" :
+  attack.includes("F8") && sendShip4 == "F8" ? "hit" :
+  attack.includes("F9") && sendShip4 == "F9" ? "hit" :
+  attack.includes("G1") && sendShip4 == "G1" ? "hit" :
+  attack.includes("G2") && sendShip4 == "G2" ? "hit" :
+  attack.includes("G3") && sendShip4 == "G3" ? "hit" :
+  attack.includes("G4") && sendShip4 == "G4" ? "hit" :
+  attack.includes("G5") && sendShip4 == "G5" ? "hit" :
+  attack.includes("G6") && sendShip4 == "G6" ? "hit" :
+  attack.includes("G7") && sendShip4 == "G7" ? "hit" :
+  attack.includes("G8") && sendShip4 == "G8" ? "hit" :
+  attack.includes("G9") && sendShip4 == "G9" ? "hit" :
+  attack.includes("H1") && sendShip4 == "H1" ? "hit" :
+  attack.includes("H2") && sendShip4 == "H2" ? "hit" :
+  attack.includes("H3") && sendShip4 == "H3" ? "hit" :
+  attack.includes("H4") && sendShip4 == "H4" ? "hit" :
+  attack.includes("H5") && sendShip4 == "H5" ? "hit" :
+  attack.includes("H6") && sendShip4 == "H6" ? "hit" :
+  attack.includes("H7") && sendShip4 == "H7" ? "hit" :
+  attack.includes("H8") && sendShip4 == "H8" ? "hit" :
+  attack.includes("H9") && sendShip4 == "H9" ? "hit" :
+  attack.includes("I1") && sendShip4 == "I1" ? "hit" :
+  attack.includes("I2") && sendShip4 == "I2" ? "hit" :
+  attack.includes("I3") && sendShip4 == "I3" ? "hit" :
+  attack.includes("I4") && sendShip4 == "I4" ? "hit" :
+  attack.includes("I5") && sendShip4 == "I5" ? "hit" :
+  attack.includes("I6") && sendShip4 == "I6" ? "hit" :
+  attack.includes("I7") && sendShip4 == "I7" ? "hit" :
+  attack.includes("I8") && sendShip4 == "I8" ? "hit" :
+  attack.includes("I9") && sendShip4 == "I9" ? "hit" : myShips4)
+}
 
 
 //posicionar Mis barcos*************************************************************************************//
@@ -672,13 +1162,18 @@ let enemyAttacks = [];
 
 // gameover situations******************************* */
 const gameover = () => {
-  setGameOver(attackedEnemies.length >= 4 ? "YouWin" : "")
+  setGameOver(attackedEnemies.length >= 4 ? "YouWin" : myShips ==("hit") && myShips1==("hit") && myShips2 == ("hit") && myShips3 == ("hit") && myShips4 == ("hit") ? "YouLose": "")
+
 
 }
 
 
 
-
+console.log(myShips)
+console.log(myShips1)
+console.log(myShips2)
+console.log(myShips3)
+console.log(myShips4)
 console.log(enemyShips)
 console.log(attack)
 console.log(sendShips)
@@ -688,7 +1183,7 @@ console.log(sendShip3)
 console.log(sendShip4)
 console.log(gameOver)
 console.log(attackedEnemies)
-console.log(ships)
+console.log(attackedShips)
 //en orden descendente://
 //inputs para colocar los barcos del jugador con sus botones//
 //botón para colocar los barcos enemigos//

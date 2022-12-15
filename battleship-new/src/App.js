@@ -1190,17 +1190,22 @@ console.log(attackedShips)
 //tablero del jugador//
 //tablero enemigo//
   return (<div>
-    <div className='instrucciones'>Ingresa coordenadas para cada barco. Presiona el botón hasta 5 veces para agregar enemigos</div>
-    <input onChange={placeMyShips}></input>
-    <button onClick={sendMyShips}>submit</button>
-    <input onChange={placeMyShips1}></input>
-    <button onClick={sendMyShip1}>submit</button>
-    <input onChange={placeMyShips2}></input>
-    <button onClick={sendMyShip2}>submit</button>
-    <input onChange={placeMyShips3}></input>
-    <button onClick={sendMyShip3}>submit</button>
-    <input onChange={placeMyShips4}></input>
-    <button onClick={sendMyShip4}>submit</button>
+    <div className='instrucciones'>Ingresa una coordenada para cada barco en cada input y presiona el botón para poner el barco. <br></br>
+     Presiona el botón de enmigos hasta 5 veces para agregar enemigos que serán invisibles hasta que los reveles con tu click.  <br></br>
+     Cuando descubras un enemigo, hazle click una vez más para destruirlo.<br></br>
+     Ganarás cuando destruyas los barcos enemigos, pero perderás si el enmigo destruye los tuyos.
+
+     </div>
+    <input placeholder='Ej: A1' onChange={placeMyShips}></input>
+    <button onClick={sendMyShips}>poner barco</button>
+    <input placeholder='Ej: A2' onChange={placeMyShips1}></input>
+    <button onClick={sendMyShip1}>poner barco</button>
+    <input placeholder='Ej: A3' onChange={placeMyShips2}></input>
+    <button onClick={sendMyShip2}>poner barco</button>
+    <input placeholder='Ej: A4' onChange={placeMyShips3}></input>
+    <button onClick={sendMyShip3}>poner barco</button>
+    <input placeholder='Ej: A5' onChange={placeMyShips4}></input>
+    <button onClick={sendMyShip4}>poner barco</button>
 
     <button onClick={placeEnemyShips}>Enemigos</button>
 

@@ -1191,7 +1191,7 @@ console.log(attackedShips)
 //tablero enemigo//
   return (<div>
     <div className='instrucciones'>Ingresa una coordenada para cada barco en cada input y presiona el botón para poner el barco. <br></br>
-     Presiona el botón de enmigos hasta 5 veces para agregar enemigos que serán invisibles hasta que los reveles con tu click.  <br></br>
+     Presiona el botón de enmigos hasta 5 veces para agregar enemigos que serán invisibles hasta que los reveles con tu click en los cuadros de coordenadas.  <br></br>
      Cuando descubras un enemigo, hazle click una vez más para destruirlo.<br></br>
      Ganarás cuando destruyas los barcos enemigos, pero perderás si el enmigo destruye los tuyos.
 

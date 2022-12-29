@@ -1118,6 +1118,7 @@ const saveAttacked = () => {
 
 //posicionar Mis barcos*************************************************************************************//
 const placeMyShips = (e) => {
+
 setMyShips(e.target.value)
 } 
 const placeMyShips1 = (e) => {
@@ -1166,7 +1167,6 @@ const gameover = () => {
 
 
 }
-
 
 
 console.log(myShips)
